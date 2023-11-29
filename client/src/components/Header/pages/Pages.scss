@@ -1,0 +1,57 @@
+@mixin dropdown {
+    padding: 5px 15px;
+    left: 38.5%;
+    min-height: 130px;
+}
+@mixin cursor {
+    cursor: pointer;
+}
+@mixin transition {
+    transition: all 0.4s ease 0s;
+}
+@mixin list-item {
+    position: relative;
+    list-style-type: none;
+    font-family: var(--template-font);
+    margin-bottom: 15px;
+    margin-top: 10px;
+    @include cursor;
+    color: var(--black);
+    @include transition;
+}
+
+.pages__dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    @include transition;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid var(--template-yellow);
+    background-color: var(--white);
+    padding: 5px 15px;
+    position: absolute;
+    left: 7.2%;
+    top: 65px;
+    @include dropdown;
+    padding-top: 0;
+    left: 55%;
+    > ul {
+      padding: 0 50px 0 20px;
+      > li {
+        @include list-item;
+        margin-top: 15px;
+        &:hover {
+          color: var(--template-yellow);
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: -12px;
+          width: 5px;
+          height: 5px;
+          background-color: var(--template-yellow);
+        }
+      }
+    }
+  }

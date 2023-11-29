@@ -1,0 +1,121 @@
+.customerReviews {
+  background: #121619;
+  text-align: center;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/Images/home-slider-images/slider-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+  }
+  &-top-picture {
+    position: absolute;
+    top: -44px;
+    left: 0;
+    right: 0;
+    > img {
+      width: 100%;
+    }
+  }
+  &-bottom-picture {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    > img {
+      width: 100%;
+    }
+  }
+  > .container {
+    padding: 100px 95px;
+  }
+  &-title {
+    padding-bottom: 50px;
+    > p {
+      font-size: 30px;
+      color: #fd9d3e;
+      font-family: "Pacifico", cursive;
+      padding-bottom: 10px;
+    }
+    > h1 {
+      color: #fff;
+      font-size: 70px;
+      line-height: 58px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+  }
+  &-slider-item {
+    display: flex;
+    gap: 30px;
+    &-img {
+      align-items: center;
+      padding: 20px 0px;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        height: 135px;
+        border: solid 5px #fd9d3e;
+        border-radius: 100%;
+      }
+      > p {
+        font-size: 20px;
+        color: #fd9d3e;
+        text-transform: uppercase;
+        padding-top: 10px;
+      }
+    }
+    &-review {
+      width: calc(100% - 180px);
+      background: #fff;
+      padding: 40px 50px;
+      position: relative;
+      text-align: left;
+      font-style: italic;
+      font-size: 18px;
+      &-author {
+        padding-top: 15px;
+        display: flex;
+        color: #fd9d3e;
+      }
+    }
+    &-review::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 17.5px 18px 17.5px 0;
+      border-color: transparent #ffffff transparent transparent;
+      position: absolute;
+      left: -17px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.swiper-pagination-fraction {
+  border: solid;
+  color: #fd9d3e;
+}
+.fadeUp {
+  animation: fadeUp .8s both;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translate3d(0, 200px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,99 @@
+@mixin cursor {
+    cursor: pointer;
+}
+@mixin transition {
+    transition: all 0.4s ease 0s;
+}
+@mixin list-item {
+    position: relative;
+    list-style-type: none;
+    font-family: var(--template-font);
+    margin-bottom: 15px;
+    margin-top: 10px;
+    @include cursor;
+    color: var(--black);
+    @include transition;
+}
+@mixin dropdown {
+    padding: 5px 15px;
+    left: 38.5%;
+    min-height: 130px;
+}
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+.menu__dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    @include transition;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid var(--template-yellow);
+    background-color: var(--white);
+    padding: 5px 15px;
+    position: absolute;
+    left: 7.2%;
+    top: 65px;
+    > .container {
+      max-width: 1080px !important;
+      color: #a4a4a4;
+      display: flex;
+      > .pizzas {
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px 10px;
+        > div {
+          padding: 20px;
+          width: 33%;
+          // @include flex;
+          @include cursor;
+          @include transition;
+          &:hover {
+            background-color: rgb(253 157 62 / 0.15);
+          }
+          .pizza__image {
+            width: 100px;
+            float: left;
+            > img {
+              width: 100%;
+            }
+          }
+          > .about__pizza {
+            margin: 0 10px;
+            padding-top: 10px;
+            font-family: var(--template-font);
+            > p {
+              color: var(--black);
+              &:nth-child(2) {
+                color: var(--template-yellow);
+                margin: 5px 0;
+              }
+            }
+          }
+        }
+      }
+      > .menu__list {
+        padding-top: 50px;
+        > ul {
+          > li {
+            @include list-item;
+            &:hover {
+              color: var(--template-yellow);
+            }
+            &:before {
+              content: "";
+              position: absolute;
+              top: 10px;
+              left: -12px;
+              width: 5px;
+              height: 5px;
+              background-color: var(--template-yellow);
+            }
+          }
+        }
+      }
+    }
+  }

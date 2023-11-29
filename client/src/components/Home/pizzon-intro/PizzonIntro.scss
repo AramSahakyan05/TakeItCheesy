@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.pizzon-intro {
+    > .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+        padding: 100px 30px;
+       > .pizzon-intro-top {
+            width: 40%;
+            transition: all 400ms ease 0s;
+            transform: translateX(-650px);
+            padding-bottom: 60px;
+            > h2 {
+                color: var(--template-yellow);
+                font-family: "Pacifico", cursive;
+                text-transform: capitalize;
+                font-size: 30px;
+            }
+            > h1 {
+                margin-top: -10px;
+                font-size: 70px;
+                color: #1d1d1d;
+            }
+            > p {
+                font-size: 14px;
+                color: var(--black);
+                margin-top: 10px;
+                margin-bottom: 40px;
+                line-height: 24px;
+            }
+            > a {
+                padding: 20px 40px;
+                font-weight: 900;
+                color: var(--white);
+                border-radius: 30px;
+                text-decoration: none;
+                background-color: var(--template-yellow);
+                transition: all 400ms ease 0s;
+                border: 1px solid var(--template-yellow);
+                &:hover {
+                    background-color: var(--white);
+                    color: var(--template-yellow);
+                }
+            }
+       }
+       .pizzon-intro-image {
+        width: 40%;
+        transform: translateX(650px);
+        transition: all 400ms ease 0s;
+            > img {
+                width: 65%;
+            }
+       }
+       .fadeInLeft {
+        animation: fadeInLeft 1s both;
+       }
+       .fadeInRight {
+        animation: fadeInRight 1s both;
+       }
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(200px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,57 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.page-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  // @include flex;
+  animation: smooth 1s ease-out 14s;
+  &-img {
+    width: 80px;
+    height: 80px;
+    animation: loading 14s linear infinite;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  > span {
+    font-family: inherit;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+@keyframes smooth {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+      transform: translate(0, 0); 
+  }
+  25% {
+      transform: translate(93vw, 0);
+  }
+  75% {
+      transform: translate(0, 88vh);
+  }
+  100% {
+      transform: translate(0, 0);
+  }
+}

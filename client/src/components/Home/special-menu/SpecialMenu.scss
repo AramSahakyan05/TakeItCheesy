@@ -1,0 +1,128 @@
+.special-menu {
+  background-color: #121619;
+  position: relative;
+  > .container {
+    padding: 100px 90px;
+  }
+  > .menu-top-picture, .menu-bottom-picture {
+    position: absolute;
+    left: 0;
+    right: 0;
+    > img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .menu-top-picture {
+    top: -50px;
+  }
+  .menu-bottom-picture {
+    bottom: -95px;
+  }
+  padding: 114px 0 57px 0;
+  position: relative;
+  &-top-img{
+    img{
+      top: -48px;
+      left: 0;
+    }
+  }
+  &-title {
+    text-align: center;
+    p {
+      font-size: 30px;
+      color: #fd9d3e;
+      font-family: "Pacifico", "cursive";
+      padding-bottom: 10px;
+    }
+    h2 {
+      font-size: 70px;
+      color: #fff;
+      line-height: 58px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      padding-bottom: 50px;
+    }
+    &-nav {
+      display: inline-block;
+      background: #2b2c2d;
+      border-radius: 50px;
+      list-style: none;
+      li {
+        display: inline-block;
+        a {
+          display: inline-block;
+          color: #fff;
+          transition: all 400ms ease;
+          font-size: 14px;
+          padding: 17px 28px;
+          letter-spacing: 1px;
+          cursor: pointer;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+  &-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 500px;
+    padding-bottom: 60px;
+    &-item {
+      animation: appearItem 1s ease;
+      width: 306px;
+      text-align: center;
+      padding-top: 50px;
+      img {
+        min-height: 200px;
+        height: 200px;
+        margin: auto;
+        transition: all 400ms ease;
+      }
+      img:hover {
+        transform: translate(0px, -30px);
+      }
+      a {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        transition: all 600ms ease;
+        color: #1d1d1d;
+        cursor: pointer;
+        font-size: 18px;
+        color: #fff;
+        letter-spacing: 1px;
+        padding: 12px 0;
+        display: block;
+        transition: all 400ms ease;
+      }
+      a:hover {
+        color: #fd9d3e;
+      }
+      p {
+        font-size: 14px;
+        color: #999999;
+        letter-spacing: 1px;
+        padding-bottom: 12px;
+      }
+      p:last-child {
+        color: #fd9d3e;
+      }
+    }
+  }
+}
+
+@keyframes appearItem {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}

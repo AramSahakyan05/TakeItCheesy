@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@mixin cursor {
+    cursor: pointer;
+}
+@mixin transition {
+    transition: all 0.4s ease 0s;
+}
+@mixin list-item {
+    position: relative;
+    list-style-type: none;
+    font-family: var(--template-font);
+    margin-bottom: 15px;
+    margin-top: 10px;
+    @include cursor;
+    color: var(--black);
+    @include transition;
+}
+@mixin dropdown {
+    padding: 5px 15px;
+    left: 38.5%;
+    min-height: 130px;
+}
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 0 10px 0;
+    background: transparent;
+    @include transition;
+    > .container {
+      padding: 0 40px;
+      > .row {
+        @include flex;
+        justify-content: space-evenly;
+        position: relative;
+        > .logo {
+          @include cursor; // Here is example of @include
+          margin-left: 15px;
+          > h1 {
+            @include transition;
+            font-size: 40px;
+            font-family: 'Permanent Marker', cursive; 
+            color: #ffd283;
+            > span {
+              background-image: url('https://www.mashed.com/img/gallery/swiss-cheeses-trademark-holes-are-caused-by-bacteria/intro-1676998215.jpg');
+              -webkit-background-clip: text; 
+              -webkit-text-fill-color: transparent;
+              background-position: center;
+            }
+          }
+        }
+        > ul {
+          @include flex;
+          justify-content: flex-end;
+          width: 65%;
+          margin-right: 15px;
+          > li {
+            overflow: hidden;
+            margin: 0 20px;
+            padding: 10px 0 15px 0;
+            font-size: 16px;
+            list-style-type: none;
+            font-family: var(--template-font);
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            @include transition;
+            @include cursor;
+            > a {
+              text-decoration: none;
+              color: var(--white);
+              @include transition;
+              @include cursor;
+            }
+            > a:hover {
+              color: var(--template-yellow);
+            }
+            &:hover {
+              &:not(:nth-child(6), :nth-child(7)) {
+                color: var(--template-yellow);
+              }
+            }
+            & > svg {
+              @include transition;
+            }
+            &:nth-child(6) {
+              margin-left: 25px;
+            }
+            &:nth-child(7) {
+              margin-left: 0;
+            }
+            &:nth-child(6):hover > svg:nth-child(1),
+            &:nth-child(7):hover > svg:nth-child(1) {
+              transform: translate3d(0, -180%, 0);
+              opacity: 1;
+            }
+            &:nth-child(6):hover > svg:nth-child(2),
+            &:nth-child(7):hover > svg:nth-child(2) {
+              transform: translate3d(0, 0, 0);
+              opacity: 1;
+            }
+            & > svg {
+              color: var(--template-yellow);
+              margin-right: 7px;
+              height: 20px;
+              width: 20px;
+              @include transition;
+              &:nth-child(2) {
+                color: var(--white);
+                position: absolute;
+                transform: translate3d(0, 180%, 0);
+                opacity: 0;
+              }
+            }
+            &:last-child {
+              padding: 11px 15px 11px;
+              background: #91b842;
+              border-radius: 30px;
+              margin-right: 0;
+              margin-left: 0;
+              margin-bottom: 5px;
+              &:hover {
+                color: var(--white);
+                background-color: rgb(253 157 62 / 0.7);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .fixed {
+    background-color: #121619;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.1);
+    padding: 10px 0 8px 0;
+    @include transition;
+    > .container > .row {
+      .logo {
+        > h1 {
+          transform: scale3d(0.8, 0.8, 1) translateX(-25px);
+          @include transition;
+      }
+    }
+  }
+}
+
+  .row > ul > li.menu__item:hover .menu__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+  .row > ul > li.blog__item:hover .blog__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+  .row > ul > li.page__item:hover .pages__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+  .row > ul > li.shopping__cart__item:hover .shopping__cart__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+  

@@ -1,0 +1,183 @@
+@mixin smooth-transition {
+  transition: all 0.4s ease;
+}
+
+.shopping-cart {
+  &-cont {
+    margin: 124px 0;
+    select {
+      background: url("../../assets/Images/home-order-sec-icons/select-icon.png")
+        no-repeat scroll right 50% #fff !important;
+      padding: 8px 15px;
+      border-radius: 4px;
+      border: 1px solid #dee2e6;
+      background-color: #fff;
+      outline: none;
+      font-family: inherit;
+      cursor: pointer;
+      appearance: none;
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 34px;
+      border: 1px solid #fff;
+      background-color: var(--global-orange-color);
+      color: #fff;
+      border-radius: 28px;
+      font-weight: 600;
+      font-family: inherit;
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      @include smooth-transition;
+      svg {
+        margin-right: 4px;
+        width: 16px;
+        height: 16px;
+      }
+      &:hover {
+        background-color: #fff;
+        color: var(--global-orange-color);
+        border: 1px solid var(--global-orange-color);
+      }
+    }
+    &-table {
+      color: var(--black);
+      margin: auto;
+      table {
+        width: 100%;
+        th,
+        td {
+          padding: 0.5rem 0.5rem;
+          text-align: center;
+          min-width: 120px;
+        }
+        th {
+          font-weight: 800;
+        }
+        th:nth-child(-n + 2),
+        td:nth-child(-n + 2) {
+          text-align: left;
+        }
+        td:nth-child(2) {
+          text-transform: uppercase;
+          @include smooth-transition;
+
+          cursor: pointer;
+          &:hover {
+            color: var(--global-orange-color);
+          }
+        }
+        td:nth-child(3),
+        td:nth-child(5) {
+          color: var(--global-orange-color);
+          font-weight: bold;
+          font-size: 18px;
+        }
+        tbody {
+          svg {
+            border: 1px solid #fff;
+            background-color: var(--global-orange-color);
+            color: #fff;
+            width: 44px;
+            height: 35px;
+            padding: 11px 6px;
+            border-radius: 16px;
+            cursor: pointer;
+            @include smooth-transition;
+            &:hover {
+              border: 1px solid var(--global-orange-color);
+              color: var(--global-orange-color);
+              background-color: #fff;
+            }
+          }
+          td {
+            img {
+              width: 120px;
+              height: 120px;
+              object-fit: contain;
+              padding: 12px;
+              border: 1px solid #dee2e6;
+            }
+          }
+          select {
+            width: 70px;
+          }
+        }
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #dee2e6;
+        border-collapse: collapse;
+      }
+    }
+    &-buttons {
+      margin: 36px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-taxes {
+      border-top: 1px solid #dee2e6;
+      border-bottom: 1px solid #dee2e6;
+      padding: 56px 0;
+      display: flex;
+      gap: 120px;
+      &-selects {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .select-province-city {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 36px;
+          .city,
+          .province {
+            flex: 1;
+          }
+        }
+      }
+      &-cart {
+        flex: 1;
+      }
+      ul {
+        list-style-type: none;
+        color: var(--black);
+        border: 1px solid #dee2e6;
+        li {
+          padding: 12px 24px;
+          .li-element {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            .price {
+              margin-right: 120px;
+              color: var(--global-orange-color);
+              font-weight: 800;
+              font-family: inherit;
+            }
+          }
+        }
+        li:not(:last-child) {
+          border-bottom: 1px solid #dee2e6;
+        }
+        li:first-child,
+        li:last-child {
+          font-weight: 600;
+        }
+      }
+    }
+    .prev {
+      float: right;
+      margin: 24px 0;
+    }
+  }
+}

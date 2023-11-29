@@ -1,0 +1,56 @@
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+@mixin transition {
+    transition: all 0.4s ease 0s;
+}
+@mixin cursor {
+    cursor: pointer;
+}
+.fade__up {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: var(--template-yellow);
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    @include flex;
+    @include cursor;
+    @include transition;
+    justify-content: center;
+    padding-top: 4px;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);
+    &:hover {
+      background-color: var(--black);
+    }
+    > a {
+      margin: 0;
+      > svg {
+        font-size: 23px;
+        color: var(--white);
+      }
+    }
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: var(--template-yellow);
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    @include flex;
+    @include cursor;
+    @include transition;
+    justify-content: center;
+    padding-top: 4px;
+    z-index: 1;
+    &:hover {
+      background-color: var(--black);
+    }
+    > a > svg {
+      font-size: 23px;
+      color: var(--white);
+    }
+  }

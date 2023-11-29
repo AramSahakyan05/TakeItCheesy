@@ -1,0 +1,16 @@
+.blog__bar__layout {
+  > .container {
+    padding: 50px 95px;
+  }
+}
+.blog__bar__main__section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  margin-top: 78px;
+  gap: 34px;
+  a {
+    text-decoration: none;
+  }
+}
+

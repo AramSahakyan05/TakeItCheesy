@@ -1,0 +1,492 @@
+{
+    "pizzaData" : [
+        {
+            "image": "pepperoni.png",
+            "name": "Pepperoni",
+            "price": 30.29,
+            "desctiption": "Tomato sauce, pepperoni, mozzarella,parmezan, garlic, oregano, sugar.",
+            "last_price": 40.19,
+            "currency": "USD"
+        },
+        {
+            "image": "vegetarian.png",
+            "name": "Vegetarian",
+            "price": 30.29,
+            "desctiption": "Tomato sauce, purple onion, mushrooms, green pepper, olive fruit.",
+            "last_price": 40.19,
+            "currency": "USD"
+        },
+        {
+            "image": "pepperoni.png",
+            "name": "Speciality",
+            "price": 30.29,
+            "desctiption": "Tomato souce, tomato, grated, mozarella, lettuce.",
+            "last_price": 40.19,
+            "currency": "USD"
+        },
+        {
+            "image": "pepperoni.png",
+            "name": "Ham & Cheese",
+            "price": 30.29,
+            "desctiption": "Ham, mozzarella, bacon.",
+            "last_price": 40.19,
+            "currency": "USD"
+        },
+        {
+            "image": "pepperoni.png",
+            "name": "Onion",
+            "price": 30.29,
+            "desctiption": "Sausage, purple onion, marinated cucumber, tomato sauce, mushroom, parsley.",
+            "last_price": 40.19,
+            "currency": "USD"
+        },
+        {
+            "image": "pepperoni.png",
+            "name": "Margherita pizza",
+            "price": 30.29,
+            "desctiption": "Crushed San Marzano tomato sauce, fresh mozzarella and basil, a drizzle of olive oil, and a sprinkle of salt.",
+            "last_price": 40.19,
+            "currency": "USD"
+        }
+    ],
+    "specialMenuData" :[
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "VALENTINOS SPECIAL PIZZA",
+            "image": "pepperoni.png",
+            "description": "Combo pizza with Italian-seasoned ground beef, Italian sausage, pepperoni, honey-cured ham, and sliced mushrooms.",
+            "price": 23.99,
+            "type": "pizzas",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "CEASER SALAD",
+            "image": "pepperoni.png",
+            "description": "French baguette, letucce, chicken, parmesan, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "ORANGE COCKTAIL",
+            "image": "pepperoni.png",
+            "description": "Orange juice, vodka, lemon-lime soda, grand marnier.",
+            "price": 20.50,
+            "type": "drinks",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "CHOCOLATE COOKIES",
+            "image": "pepperoni.png",
+            "description": "Unsalted butter, brown sugar, egg, vanilla, flour.",
+            "price": 20.50,
+            "type": "desserts",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "PEPPERONI PIZZA",
+            "image": "pepperoni.png",
+            "description": "Tomato sauce, pepperoni, mozzarella,parmezan, garlic, oregano, sugar.",
+            "price": 20.50,
+            "type": "pizzas",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "SEA FOOD PASTA",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "VALDOSTANA PIZZA",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "pizzas",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "RASPBERRY COCKTAIL",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "drinks",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GRILLED CHICKEN BLT SALAD",
+            "image": "pepperoni.png",
+            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        }
+    ],
+    "bestChefData" : [
+        {
+            "image" : "bestchef.png",
+            "name" : "John Doe",
+            "speciality" : "sous chef"
+        },
+        {
+            "image" : "bestchef.png",
+            "name" : "John Doe",
+            "speciality" : "sous chef"
+        },
+        {
+            "image" : "bestchef.png",
+            "name" : "John Doe",
+            "speciality" : "sous chef"
+        },
+        {
+            "image" : "bestchef.png",
+            "name" : "John Doe",
+            "speciality" : "sous chef"
+        }, 
+        {
+            "image" : "bestchef.png",
+            "name" : "John Doe",
+            "speciality" : "sous chef"
+        },
+        {
+            "image" : "bestchef.png",
+            "name" : "John Doe",
+            "speciality" : "sous chef"
+        }
+
+    ],
+    "blogDetailReviewData" : [
+        {
+            "name" : "John Doe",
+            "image" : "bestchef.png",
+            "review" : "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
+            "reply_button" : "Reply"
+        },
+        {
+            "name" : "John Doe",
+            "image" : "bestchef.png",
+            "review" : "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
+            "reply_button" : "Reply"
+        },
+        {
+            "name" : "John Doe",
+            "image" : "bestchef.png",
+            "review" : "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
+            "reply_button" : "Reply"
+        }
+    ],
+    "blogSidePosts" : [
+        {
+            "image" : "blog.png",
+            "author" : "John Doe",
+            "comments" : [],
+            "title" : "Possession so comparison inquietude he conviction'",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handfulThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful."
+        },
+        {
+            "image" : "blog.png",
+            "author" : "John Doe",
+            "comments" : [],
+            "title" : "Possession so comparison inquietude he conviction'",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handfulThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful."
+        },
+        {
+            "image" : "blog.png",
+            "author" : "John Doe",
+            "comments" : [],
+            "title" : "Possession so comparison inquietude he conviction'",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handfulThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful."
+        }
+    ],
+    "latestNewsData" : [
+        {
+            "image" : "news1.jpg",
+            "date" : "2023-05-11",
+            "by" : "John Doe",
+            "comments" : [],
+            "title" : "POSSESSION SO COMPARISON INQUIETUDE HE CONVICTION",
+            "read_more_button" : "Read More" 
+        },
+        {
+            "image" : "news1.jpg",
+            "date" : "2023-05-11",
+            "by" : "John Doe",
+            "comments" : [],
+            "title" : "POSSESSION SO COMPARISON INQUIETUDE HE CONVICTION",
+            "read_more_button" : "Read More" 
+        },
+        {
+            "image" : "news1.jpg",
+            "date" : "2023-05-11",
+            "by" : "John Doe",
+            "comments" : [],
+            "title" : "POSSESSION SO COMPARISON INQUIETUDE HE CONVICTION",
+            "read_more_button" : "Read More" 
+        }
+    ],
+    "customerReviewsData" : [
+        {
+            "image" : "customer.png",
+            "name" : "John Doe",
+            "text" : "The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper too will do their comforta The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper toowill do their comforta The one day when the lady met this fellow and they knew it was much",
+            "speciality" : "-designer"
+        },
+        {
+            "image" : "customer.png",
+            "name" : "John Doe",
+            "text" : "The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper too will do their comforta The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper toowill do their comforta The one day when the lady met this fellow and they knew it was much",
+            "speciality" : "-designer"
+        },
+        {
+            "image" : "customer.png",
+            "name" : "John Doe",
+            "text" : "The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper too will do their comforta The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper toowill do their comforta The one day when the lady met this fellow and they knew it was much",
+            "speciality" : "-designer"
+        }
+    ],
+    "pizzaReviewData" : [
+        {
+            "image"  : "review.png",
+            "name"   : "Jason Stethem",
+            "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
+            "reply_button" : "Reply",
+            "date" : "2023-11-11"
+        },
+        {
+            "image"  : "review.png",
+            "name"   : "Dwayne Johnson",
+            "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
+            "reply_button" : "Reply",
+            "date" : "2023-11-11"
+        },
+        {
+            "image"  : "review.png",
+            "name"   : "Vin Diesel",
+            "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
+            "reply_button" : "Reply",
+            "date" : "2023-11-11"
+        }
+    ],
+    "foodMenu" : [
+        {
+            "name" : "STRAWBERRY SHORTCAKE",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        },
+        {
+            "name" : "BARBECUE PIZZA",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        },
+        {
+            "name" : "BARBECUE PIZZA",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        },
+        {
+            "name" : "STRAWBERRY DAIQUIRI",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        },
+        {
+            "name" : "BARBECUE PIZZA",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        },
+        {
+            "name" : "BARBECUE PIZZA",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        },
+        {
+            "name" : "BARBECUE PIZZA",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        },
+        {
+            "name" : "BARBECUE PIZZA",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        },
+        {
+            "name" : "BARBECUE PIZZA",
+            "image" : "image.png",
+            "first_ingredient" : "Strawberries",
+            "second_ingredient" : "Cream",
+            "third_ingredient" : "Salt",
+            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "order_button" : "ORDER NOW",
+            "type" : "dessert"
+        }
+
+    ]
+}
