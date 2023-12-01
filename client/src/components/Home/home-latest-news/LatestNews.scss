@@ -1,19 +1,11 @@
 .news {
   position: relative;
   > .container {
-    padding: 0 85px;
+    padding: 0 85px 100px;
   }
   &__top__img {
+    position: absolute;
     top: -36px;
-    left: 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  &__bottom__img {
-    bottom: -46px;
     left: 0;
     img {
       width: 100%;

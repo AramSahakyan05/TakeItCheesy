@@ -1,14 +1,10 @@
 import { BsTelephone } from "react-icons/bs";
 import { SlHandbag } from "react-icons/sl";
 
-import pepperoni from "./assets/header-images/menu-list-images/pepperoni.png";
-import vegetarian from "./assets/header-images/menu-list-images/vegetarian.png";
-import specialty from "./assets/header-images/menu-list-images/specialty.png";
-import hamCheese from "./assets/header-images/menu-list-images/hamCheese.webp";
-import onion from "./assets/header-images/menu-list-images/onion.png";
-import margherita from "./assets/header-images/menu-list-images/margherita.webp";
-import logo from "./assets/header-images/header-logo.png";
-import valentinos_special_pizza_picture from "./assets/header-images/menu-list-images/valentinos-special.png";
+// import pepperoni from "./assets/header-images/menu-list-images/classic-pepperoni.png";
+// import vegetarian from "./assets/header-images/menu-list-images/veggie.png";
+// import margherita from "./assets/header-images/menu-list-images/margherita.webp";
+// import valentinos_special_pizza_picture from "./assets/header-images/menu-list-images/valentinos-special-pizza.jpg";
 
 import pizza_1 from "./assets/Images/home-slider-images/banner-bg-1.png";
 import pizza_3 from "./assets/Images/home-slider-images/pizza-banner-2.png";
@@ -88,44 +84,6 @@ export const CONFIG = {
     },
   ],
   menuConfig: {
-    pizzas: [
-      {
-        id: 1,
-        img: pepperoni,
-        name: "Pepperoni",
-        price: "$12.99",
-      },
-      {
-        id: 2,
-        img: vegetarian,
-        name: "Vegetarian",
-        price: "$12.99",
-      },
-      {
-        id: 3,
-        img: specialty,
-        name: "Specialty",
-        price: "$12.99",
-      },
-      {
-        id: 4,
-        img: hamCheese,
-        name: "Ham & Cheese",
-        price: "$12.99",
-      },
-      {
-        id: 5,
-        img: onion,
-        name: "Onion",
-        price: "$12.99",
-      },
-      {
-        id: 6,
-        img: margherita,
-        name: "Margheritapizza",
-        price: "$12.99",
-      },
-    ],
     menuListConfig: [
       {
         id: 1,
@@ -399,36 +357,36 @@ export const CONFIG = {
   },
   blog_side_bar_categories: ["decorate", "even", "gallery", "recipe", "restaurant food"],
   blog_side_bar_tags: ["cooking", "food", "pellentesfetque", "restaurant Food", "nulla pellentesque", "cooking"],
-  related_products : [
-    {
-      id: 1,
-      img: margherita,
-      name: "MARGHERITA PIZZA",
-      description: "Crushed San Marzano tomato sauce, fresh mozzarella and basil, a drizzle of olive oil, and a sprinkle of salt.",
-      price: "$20.50"
-    },
-    {
-      id: 2,
-      img: valentinos_special_pizza_picture,
-      name: "VALENTINOS SPECIAL PIZZA",
-      description: "Combo pizza with Italian-seasoned ground beef, Italian sausage, pepperoni, honey-cured ham, and sliced mushrooms make this a classic..",
-      price: "$23.99"
-    },
-    {
-      id: 3,
-      img: vegetarian,
-      name: "VEGETARIAN",
-      description: "Tomato sauce, purple onion, mushrooms, green pepper, olive fruit",
-      price: "$20.50"
-    },
-    {
-      id: 4,
-      img: pepperoni,
-      name: "PEPPERONI PIZZA",
-      description: "Tomato sauce, pepperoni, mozzarella,parmezan, garlic, oregano, sugar.",
-      price: "$20.50"
-    },
-  ],
+  // related_products : [
+  //   {
+  //     id: 1,
+  //     img: margherita,
+  //     name: "MARGHERITA PIZZA",
+  //     description: "Crushed San Marzano tomato sauce, fresh mozzarella and basil, a drizzle of olive oil, and a sprinkle of salt.",
+  //     price: "$20.50"
+  //   },
+  //   {
+  //     id: 2,
+  //     img: valentinos_special_pizza_picture,
+  //     name: "VALENTINOS SPECIAL PIZZA",
+  //     description: "Combo pizza with Italian-seasoned ground beef, Italian sausage, pepperoni, honey-cured ham, and sliced mushrooms make this a classic..",
+  //     price: "$23.99"
+  //   },
+  //   {
+  //     id: 3,
+  //     img: vegetarian,
+  //     name: "VEGETARIAN",
+  //     description: "Tomato sauce, purple onion, mushrooms, green pepper, olive fruit",
+  //     price: "$20.50"
+  //   },
+  //   {
+  //     id: 4,
+  //     img: pepperoni,
+  //     name: "PEPPERONI PIZZA",
+  //     description: "Tomato sauce, pepperoni, mozzarella,parmezan, garlic, oregano, sugar.",
+  //     price: "$20.50"
+  //   },
+  // ],
   blogDetailTags: [
     { id: 1, tag: "Planing" },
     { id: 2, tag: "Business" },

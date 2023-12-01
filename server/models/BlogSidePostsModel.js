@@ -10,7 +10,7 @@ const blogSidePostsSchema = new mongoose.Schema({
         required: true
     },
     comments: {
-        type: String,
+        type: Array,
         required: true
     },
     title: {

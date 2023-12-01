@@ -105,7 +105,7 @@ const Menu = () => {
                 return (
                   <div className="foodMenu-list-item" key={_id}>
                     <div className="foodMenu-list-item-img">
-                      <img src={image} alt="Food Image" />
+                      <img src={require(`../../assets/food-menu/${image}`)} alt="Food Image" />
                     </div>
                     <div className="foodMenu-list-item-des">
                       <p>{name}</p>

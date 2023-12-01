@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import about_pizzon from '../../../assets/home/about/about-pizzon.png';
+import about_pizzon from '../../../assets/home-speciality/about-pizzon.png';
 
 import Container from '../../UIContainer/container/Container';
 

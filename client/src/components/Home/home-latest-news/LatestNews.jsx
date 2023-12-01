@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 
 import { Link, useNavigate } from "react-router-dom";
 
-import topImg from "../../../assets/Images/home-order-sec-icons/menu-bottom-bg.png";
-import bottomImg from "../../../assets/Images/home-order-sec-icons/menu-top-bg.png";
+import topImg from "../../../assets/pattern/chef-top-bg.png";
+import bottomImg from "../../../assets/pattern/chef-bottom-bg.png";
 
 import Container from "../../UIContainer/container/Container";
 
@@ -50,7 +50,7 @@ export const LatestNews = () => {
                   }}
                 >
                   <div className="news__info__details__img">
-                    <img src={image} />
+                    <img src={require(`../../../assets/home-latestNews/${image}`)} />
                     <div className="news__info__details__img__date">
                       <span>
                         {date}
@@ -73,9 +73,6 @@ export const LatestNews = () => {
               );
             }
           )}
-        </div>
-        <div className="news__bottom__img top__bottom__imgs">
-          <img src={bottomImg} alt="menu__top" />
         </div>
       </Container>
     </section>

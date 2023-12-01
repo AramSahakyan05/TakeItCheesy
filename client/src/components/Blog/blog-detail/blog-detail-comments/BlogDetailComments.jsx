@@ -14,7 +14,7 @@ const BlogDetailComments = () => {
     (async function getData() {
       try {
         const resp = await axios.get('/blog-detail');
-        setBlogDetailReview(resp.data);
+        setBlogDetailReview(resp.data.blogData);
       } catch (error) {
         throw new Error(error);
       }
@@ -24,16 +24,16 @@ const BlogDetailComments = () => {
       <div className="blog__detail__comments">
         <div className="blog__detail__comments__see">
           <h3>Comments</h3>
-          {blogDetailReviews.map(({ id, commenter_image, commenter_name, commenter_review, reply_button }) => {
+          {blogDetailReviews.map(({ _id, image, name, review, reply_button }) => {
             return (
-              <div className="blog__detail__comments__see__item" key={id}>
+              <div className="blog__detail__comments__see__item" key={_id}>
                 <div className="blog__detail__comments__see__item__img">
-                  <img src={commenter_image} alt="" />
+                  <img src={require(`../../../../assets/reviews/${image}`)} alt="" />
                 </div>
                 <div className="blog__detail__comments__see__item__text">
                   <div>
-                    <h3>{commenter_name}</h3>
-                    <p>{commenter_review}</p>
+                    <h3>{name}</h3>
+                    <p>{review}</p>
                   </div>
                     <a href="#">
                       <FaReply />

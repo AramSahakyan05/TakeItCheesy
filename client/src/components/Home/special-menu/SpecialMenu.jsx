@@ -87,7 +87,7 @@ const SpecialMenu = () => {
               <div className="special-menu-items-item" key={_id}>
                 <div className="special-menu-items-item-img">
                   <a href="">
-                    <img src={image} alt="Food Image" />
+                    <img src={require(`../../../assets/special-menu/${image}`)} alt="Food Image" />
                   </a>
                 </div>
                 <a>{name}</a>

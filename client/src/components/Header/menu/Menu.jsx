@@ -8,6 +8,7 @@ import { CONFIG } from "../../../config";
 
 import Container from "../../UIContainer/container/Container";
 
+
 import './Menu.scss';
 
 const Menu = ({ path }) => {
@@ -24,7 +25,6 @@ const Menu = ({ path }) => {
       }
     })();
   }, []);
-  console.log(headerMenuList);
 
   const navigate = useNavigate();
   return (
@@ -42,7 +42,7 @@ const Menu = ({ path }) => {
                   }}
                 >
                   <div className="pizza__image">
-                    <img src={`/public/${image}`} alt="Pizza Image" />
+                    <img src={require(`../../../assets/header-images/menu-list-images/${image}`)} alt="Pizza Image" />
                   </div>
                   <div className="about__pizza">
                     <p>{name}</p>

@@ -7,8 +7,8 @@ import axios from 'axios';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, Autoplay, Pagination } from "swiper/modules";
 
-import customer_top_picture from '../../../assets/pattern/customer-top-bg.png';
-import customer_bottom_picture from '../../../assets/pattern/customer-bottom-bg.png'
+import customer_top_picture from '../../../assets/pattern/small-pattern-top.png';
+import customer_bottom_picture from '../../../assets/pattern/small-pattern-bottom.png'
 
 import Container from "../../UIContainer/container/Container";
 import { ReviewsSlide } from "./ReviewsSlide";
@@ -68,7 +68,7 @@ export const CustomerReviews = ({scrolledCustom, scrolledTitle, scrolledSlider})
                 <SwiperSlide key={_id}>
                   <ReviewsSlide
                     id={_id}
-                    // img={image}
+                    img={require(`../../../assets/reviews/${image}`)}
                     name={name}
                     speciality={speciality}
                     text={text}

@@ -4,7 +4,14 @@ import connectDB from "./connect.js";
 import { CustomerReviews } from "./models/CustomerReviewsModel.js";
 import { PizzaReview } from "./models/PizzaReviewModel.js";
 import { BlogSidePosts } from "./models/BlogSidePostsModel.js";
+import { BlogReview } from "./models/BlogReviewModel.js";
 import { Menu } from "./models/MenuModel.js";
+import { Pizza } from "./models/PizzasModel.js";
+import { SpecialMenu } from "./models/SpecialMenuModel.js";
+import { Speciality } from "./models/OurSpecialityModel.js";
+import { RecentPosts } from "./models/BlogRecentPosts.js";
+import { LatestNews } from "./models/LatestNewsModel.js";
+import { BestChef } from "./models/BestChefModel.js";
 // const absolutePath = path.resolve('../client/src/assets/header-images/menu-list-images');
 
 // async function postImageData() {

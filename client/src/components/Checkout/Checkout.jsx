@@ -2,7 +2,7 @@ import React from "react";
 
 import { useSelector } from "react-redux";
 
-import checkoutBanner from "./../../assets/checkout/checkoutBanner.jpg";
+import checkoutBanner from "./../../assets/banner/checkout-banner.jpg";
 
 import PageBanner from "../UIContainer/page-banner/PageBanner";
 import Container from "../UIContainer/container/Container";

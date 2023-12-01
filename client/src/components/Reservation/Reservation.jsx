@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { AiOutlineDown } from "react-icons/ai";
 
-import bannerBg from "./../../assets/reservation/bannerBg.jpg";
+import bannerBg from "./../../assets/banner/reservation-banner.jpg";
 
 import PageBanner from "../UIContainer/page-banner/PageBanner";
 import Container from "../UIContainer/container/Container";

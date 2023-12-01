@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-import { useSelector } from "react-redux";
-
 import { useNavigate } from "react-router-dom";
 
 import Container from "../../../UIContainer/container/Container";
@@ -42,7 +40,7 @@ const SpecialProducts = () => {
             {ourSpectalityData.map(({ _id, image, type }) => {
               return (
                 <div className="pruducts-items-item" key={_id}>
-                  {/* <img src={image} alt="Special Products" /> */}
+                  <img src={require(`../../../../assets/home-speciality/${image}`)} alt="Special Products" />
                   <h4 style={{ marginTop: "30px" }}>{type}</h4>
                 </div>
               );

@@ -56,7 +56,7 @@ export const BestChef = () => {
                 <SwiperSlide key={_id}>
                   <BestChefSlide
                     id={i+1}
-                    // img={chef_image}
+                    img={require(`../../../assets/home-bestChef/${image}`)}
                     name={name}
                     speciality={speciality}
                   />

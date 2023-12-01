@@ -1,4 +1,4 @@
-import background from "../../assets/blog-bars-images/blog-1.jpg";
+import background from "../../assets/banner/checkout-banner.jpg";
 
 import PageBanner from "../UIContainer/page-banner/PageBanner";
 import BlogBarMainSection from "./blog-bar-main-section/BlogBarMainSection";

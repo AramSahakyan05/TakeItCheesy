@@ -1,80 +1,84 @@
 {
     "pizzaData" : [
         {
-            "image": "pepperoni.png",
-            "name": "Pepperoni",
-            "price": 30.29,
+            "image": "classic-pepperoni.png",
+            "name": "PEPPERONI",
+            "price": 55.00,
             "desctiption": "Tomato sauce, pepperoni, mozzarella,parmezan, garlic, oregano, sugar.",
             "last_price": 40.19,
             "currency": "USD"
         },
         {
-            "image": "vegetarian.png",
-            "name": "Vegetarian",
-            "price": 30.29,
+            "image": "veggie.png",
+            "name": "VERY VEGGIE",
+            "price": 53.00,
             "desctiption": "Tomato sauce, purple onion, mushrooms, green pepper, olive fruit.",
-            "last_price": 40.19,
+            "last_price": 53.00,
             "currency": "USD"
         },
         {
-            "image": "pepperoni.png",
-            "name": "Speciality",
-            "price": 30.29,
+            "image": "super-supreme.png",
+            "name": "SUPER SUPREME",
+            "price": 55.00,
             "desctiption": "Tomato souce, tomato, grated, mozarella, lettuce.",
-            "last_price": 40.19,
+            "last_price": 53.00,
             "currency": "USD"
         },
         {
-            "image": "pepperoni.png",
-            "name": "Ham & Cheese",
-            "price": 30.29,
+            "image": "carnivore.png",
+            "name": "CARNIVORE",
+            "price": 59.00,
             "desctiption": "Ham, mozzarella, bacon.",
-            "last_price": 40.19,
+            "last_price": 59.00,
             "currency": "USD"
         },
         {
-            "image": "pepperoni.png",
-            "name": "Onion",
+            "image": "hot-stuff-beef.png",
+            "name": "HOST STUFF BEEF",
             "price": 30.29,
             "desctiption": "Sausage, purple onion, marinated cucumber, tomato sauce, mushroom, parsley.",
-            "last_price": 40.19,
+            "last_price": 56.00,
             "currency": "USD"
         },
         {
-            "image": "pepperoni.png",
-            "name": "Margherita pizza",
+            "image": "grilled-cheeky-chicken.png",
+            "name": "GRILLED CHEEKY CHICKEN",
             "price": 30.29,
             "desctiption": "Crushed San Marzano tomato sauce, fresh mozzarella and basil, a drizzle of olive oil, and a sprinkle of salt.",
-            "last_price": 40.19,
+            "last_price": 59.00,
             "currency": "USD"
+        }
+    ],
+    "specialityData": [
+        {
+            "image": "speciality1.jpg",
+            "type": "MEXICAN GREEN WAVE"
+        },
+        {
+            "image": "speciality2.jpg",
+            "type": "DOUBLE CHEESE PIZZA"
+        },
+        {
+            "image": "speciality3.jpg",
+            "type": "MARGHERITA PIZZA"
         }
     ],
     "specialMenuData" :[
         {
             "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
+            "image": "grilled-blt-salad.webp",
             "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
+            "price": 15.49,
             "type": "salads",
             "global_type": "all",
             "state": 1,
             "currency": "USD"
         },
         {
-            "name": "VALENTINOS SPECIAL PIZZA",
-            "image": "pepperoni.png",
-            "description": "Combo pizza with Italian-seasoned ground beef, Italian sausage, pepperoni, honey-cured ham, and sliced mushrooms.",
-            "price": 23.99,
-            "type": "pizzas",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
             "name": "CEASER SALAD",
-            "image": "pepperoni.png",
+            "image": "ceaser.png",
             "description": "French baguette, letucce, chicken, parmesan, garlic.",
-            "price": 20.50,
+            "price": 22.50,
             "type": "salads",
             "global_type": "all",
             "state": 1,
@@ -82,7 +86,7 @@
         },
         {
             "name": "ORANGE COCKTAIL",
-            "image": "pepperoni.png",
+            "image": "orange-cocktail.png",
             "description": "Orange juice, vodka, lemon-lime soda, grand marnier.",
             "price": 20.50,
             "type": "drinks",
@@ -92,17 +96,27 @@
         },
         {
             "name": "CHOCOLATE COOKIES",
-            "image": "pepperoni.png",
+            "image": "cookies.png",
             "description": "Unsalted butter, brown sugar, egg, vanilla, flour.",
-            "price": 20.50,
+            "price": 5.39,
             "type": "desserts",
             "global_type": "all",
             "state": 1,
             "currency": "USD"
         },
         {
+            "name": "SMASHBURGER",
+            "image": "smashburger.webp",
+            "description": "Ground beef, burger buns, tomato, marinated cucumber, red onion, american cheese, iceburg lettuce.",
+            "price": 10.50,
+            "type": "burgers",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
             "name": "PEPPERONI PIZZA",
-            "image": "pepperoni.png",
+            "image": "classic-pepperoni.png",
             "description": "Tomato sauce, pepperoni, mozzarella,parmezan, garlic, oregano, sugar.",
             "price": 20.50,
             "type": "pizzas",
@@ -111,18 +125,38 @@
             "currency": "USD"
         },
         {
+            "name": "FLAME-GRILLED BURGER",
+            "image": "flame-grilled-burger.webp",
+            "description": "Fresh beef chuck, salt, black pepper, tomato, marinated cucumber, american cheese.",
+            "price": 12.50,
+            "type": "burgers",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "TIRAMISU",
+            "image": "tiramisu.avif",
+            "description": "Prepared strong coffee, espresso powder, egg, granulated sugar, salt.",
+            "price": 8.99,
+            "type": "desserts",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
             "name": "SEA FOOD PASTA",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
+            "image": "seafood-pasta.png",
+            "description": "Peeled shrimp, elbow macaroni, tomato pulp, medium onion, garlic.",
+            "price": 25.00,
+            "type": "pasta",
             "global_type": "all",
             "state": 1,
             "currency": "USD"
         },
         {
             "name": "VALDOSTANA PIZZA",
-            "image": "pepperoni.png",
+            "image": "valdostana-pizza.png",
             "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
             "price": 20.50,
             "type": "pizzas",
@@ -131,9 +165,79 @@
             "currency": "USD"
         },
         {
+            "name": "PAPANASI WITH FOREST FRUIT",
+            "image": "papanasi.png",
+            "description": "Donut with heavy cream, candied forest fruit and cheese",
+            "price": 10.50,
+            "type": "desserts",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "KFC BURGER",
+            "image": "kfc-burger.png",
+            "description": "Chicken wings, chilli heatwave doritos, chilli powder, garlic flakes, red pepper, onion flakes.",
+            "price": 25.00,
+            "type": "burgers",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "MED SALAD WITH GRILLED CHICKEN",
+            "image": "med-salad.png",
+            "description": "Chicken, letucce, garlic, onion, dried oregano, lemon, tomato, yellow mustard sauce.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "PASTA WTIH PEANUT SAUCE",
+            "image": "pasta-with-peanut-sauce.webp",
+            "description": "Silky peanut sauce with tender veggies, a splash of lime and organic noodles and real broth  base to nourish you body ans soul",
+            "price": 12.70,
+            "type": "pasta",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
             "name": "RASPBERRY COCKTAIL",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
+            "image": "raspberry-cocktail.png",
+            "description": "Vodka, sugar, raspberries.",
+            "price": 14.70,
+            "type": "drinks",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "DOUBLE BURGER",
+            "image": "double-burger.png",
+            "description": "Ground beef, burger buns, tomato, marinated cucumber, red onion, american cheese, iceburg lettuce.",
+            "price": 10.50,
+            "type": "burgers",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "GREEK SALAD",
+            "image": "greek-salad.png",
+            "description": "Chicken, letucce, garlic, onion, dried oregano, lemon, tomato, yellow mustard sauce.",
+            "price": 20.50,
+            "type": "salads",
+            "global_type": "all",
+            "state": 1,
+            "currency": "USD"
+        },
+        {
+            "name": "OCEAN BLUE MOJITO",
+            "image": "ocean-blue-mojito.png",
+            "description": "Orange juice, vodka, lemon-lime soda, grand marnier.",
             "price": 20.50,
             "type": "drinks",
             "global_type": "all",
@@ -141,111 +245,11 @@
             "currency": "USD"
         },
         {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
-            "global_type": "all",
-            "state": 1,
-            "currency": "USD"
-        },
-        {
-            "name": "GRILLED CHICKEN BLT SALAD",
-            "image": "pepperoni.png",
-            "description": "Chicken breasts, lemon juice, dried oregano, garlic.",
-            "price": 20.50,
-            "type": "salads",
+            "name": "LASAGNE BOLOGNESE",
+            "image": "lasagne-bolognese.webp",
+            "description": "Onion, carrot celery stalk, beef chuck.",
+            "price": 25.00,
+            "type": "pasta",
             "global_type": "all",
             "state": 1,
             "currency": "USD"
@@ -253,32 +257,32 @@
     ],
     "bestChefData" : [
         {
-            "image" : "bestchef.png",
+            "image" : "chef1.jpg",
             "name" : "John Doe",
             "speciality" : "sous chef"
         },
         {
-            "image" : "bestchef.png",
+            "image" : "chef2.jpg",
             "name" : "John Doe",
             "speciality" : "sous chef"
         },
         {
-            "image" : "bestchef.png",
+            "image" : "chef3.jpg",
             "name" : "John Doe",
             "speciality" : "sous chef"
         },
         {
-            "image" : "bestchef.png",
+            "image" : "chef4.jpg",
             "name" : "John Doe",
             "speciality" : "sous chef"
         }, 
         {
-            "image" : "bestchef.png",
+            "image" : "chef1.jpg",
             "name" : "John Doe",
             "speciality" : "sous chef"
         },
         {
-            "image" : "bestchef.png",
+            "image" : "chef2.jpg",
             "name" : "John Doe",
             "speciality" : "sous chef"
         }
@@ -287,44 +291,61 @@
     "blogDetailReviewData" : [
         {
             "name" : "John Doe",
-            "image" : "bestchef.png",
+            "image" : "customer1.jpg",
             "review" : "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
             "reply_button" : "Reply"
         },
         {
             "name" : "John Doe",
-            "image" : "bestchef.png",
+            "image" : "customer2.jpg",
             "review" : "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
             "reply_button" : "Reply"
         },
         {
             "name" : "John Doe",
-            "image" : "bestchef.png",
+            "image" : "customer3.jpg",
             "review" : "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.",
             "reply_button" : "Reply"
         }
     ],
     "blogSidePosts" : [
         {
-            "image" : "blog.png",
+            "image" : "blog-2.jpg",
             "author" : "John Doe",
-            "comments" : [],
+            "comments" : ["comment1"],
             "title" : "Possession so comparison inquietude he conviction'",
             "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handfulThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful."
         },
         {
-            "image" : "blog.png",
+            "image" : "blog-3.jpg",
             "author" : "John Doe",
-            "comments" : [],
+            "comments" : ["comment1"],
             "title" : "Possession so comparison inquietude he conviction'",
             "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handfulThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful."
         },
         {
-            "image" : "blog.png",
+            "image" : "blog-4.jpg",
             "author" : "John Doe",
-            "comments" : [],
+            "comments" : ["comment1"],
             "title" : "Possession so comparison inquietude he conviction'",
             "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handfulThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful."
+        }
+    ],
+    "blogRecentPosts" : [
+        {
+            "date" : "SEPTEMBER 1, 2023",
+            "image" : "recent-1.jpg",
+            "title" : "POSSESSION SO COMPARISON INQUIETUDE"
+        },
+        {
+            "date" : "OCTOBER 27, 2023",
+            "image" : "recent-2.jpg",
+            "title" : "OFFERS MADE SPECIALLY FOR KIDS"
+        },
+        {
+            "date" : "NOVERMBER 30, 2023",
+            "image" : "recent-3.jpg",
+            "title" : "OUR WONDERFULLY PIZZA NEW TASTES"
         }
     ],
     "latestNewsData" : [
@@ -332,42 +353,42 @@
             "image" : "news1.jpg",
             "date" : "2023-05-11",
             "by" : "John Doe",
-            "comments" : [],
+            "comments" : ["comment1"],
             "title" : "POSSESSION SO COMPARISON INQUIETUDE HE CONVICTION",
             "read_more_button" : "Read More" 
         },
         {
-            "image" : "news1.jpg",
+            "image" : "news2.jpg",
             "date" : "2023-05-11",
             "by" : "John Doe",
-            "comments" : [],
+            "comments" : ["comment1"],
             "title" : "POSSESSION SO COMPARISON INQUIETUDE HE CONVICTION",
             "read_more_button" : "Read More" 
         },
         {
-            "image" : "news1.jpg",
+            "image" : "news3.jpg",
             "date" : "2023-05-11",
             "by" : "John Doe",
-            "comments" : [],
+            "comments" : ["comment1"],
             "title" : "POSSESSION SO COMPARISON INQUIETUDE HE CONVICTION",
             "read_more_button" : "Read More" 
         }
     ],
     "customerReviewsData" : [
         {
-            "image" : "customer.png",
+            "image" : "customer1.jpg",
             "name" : "John Doe",
             "text" : "The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper too will do their comforta The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper toowill do their comforta The one day when the lady met this fellow and they knew it was much",
             "speciality" : "-designer"
         },
         {
-            "image" : "customer.png",
+            "image" : "customer2.jpg",
             "name" : "John Doe",
             "text" : "The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper too will do their comforta The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper toowill do their comforta The one day when the lady met this fellow and they knew it was much",
             "speciality" : "-designer"
         },
         {
-            "image" : "customer.png",
+            "image" : "customer3.jpg",
             "name" : "John Doe",
             "text" : "The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper too will do their comforta The one day when the lady met this fellow and they knew it was much more than a hunch the first mate and his Skipper toowill do their comforta The one day when the lady met this fellow and they knew it was much",
             "speciality" : "-designer"
@@ -375,21 +396,21 @@
     ],
     "pizzaReviewData" : [
         {
-            "image"  : "review.png",
+            "image"  : "customer1.png",
             "name"   : "Jason Stethem",
             "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
             "reply_button" : "Reply",
             "date" : "2023-11-11"
         },
         {
-            "image"  : "review.png",
+            "image"  : "customer2.png",
             "name"   : "Dwayne Johnson",
             "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
             "reply_button" : "Reply",
             "date" : "2023-11-11"
         },
         {
-            "image"  : "review.png",
+            "image"  : "customer3.png",
             "name"   : "Vin Diesel",
             "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
             "reply_button" : "Reply",
@@ -398,92 +419,200 @@
     ],
     "foodMenu" : [
         {
-            "name" : "STRAWBERRY SHORTCAKE",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "name" : "NUTELLA WAFLES",
+            "image" : "nutella-wafles.jpg",
+            "first_ingredient" : "Nutella",
+            "second_ingredient" : "Waffle",
+            "third_ingredient" : "Strawberry",
             "order_button" : "ORDER NOW",
             "type" : "dessert"
         },
         {
             "name" : "BARBECUE PIZZA",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "image" : "barbecue-pizza.jpg",
+            "first_ingredient" : "Tomato sauce",
+            "second_ingredient" : "Chicken",
+            "third_ingredient" : "Parmezan",
+            "order_button" : "ORDER NOW",
+            "type" : "pizzas"
+        },
+        {
+            "name" : "CEASER SALAD",
+            "image" : "ceaser.jpg",
+            "first_ingredient" : "Chicken",
+            "second_ingredient" : "Letucce",
+            "third_ingredient" : "Ceaser sauce",
+            "order_button" : "ORDER NOW",
+            "type" : "salads"
+        },
+        {
+            "name" : "STRAWBERRY FRESH",
+            "image" : "strawberry-fresh.webp",
+            "first_ingredient" : "Strawberry",
+            "second_ingredient" : "Mint leaves",
+            "third_ingredient" : "Ice",
+            "order_button" : "ORDER NOW",
+            "type" : "drinks"
+        },
+        {
+            "name" : "GNOCCHI",
+            "image" : "gnocchi.avif",
+            "first_ingredient" : "Olive Oil",
+            "second_ingredient" : "Potato gnocchi",
+            "third_ingredient" : "Butter",
+            "order_button" : "ORDER NOW",
+            "type" : "pasta"
+        },
+        {
+            "name" : "STOVETOP BURGER",
+            "image" : "stovetop-burger.jpg",
+            "first_ingredient" : "Burger burn, toastes",
+            "second_ingredient" : "Beef chuck",
+            "third_ingredient" : "Tomato",
+            "order_button" : "ORDER NOW",
+            "type" : "burgers"
+        },
+        {
+            "name" : "TIRAMISU MONOPORZIONE",
+            "image" : "tiramisu-monoporzione.jpg",
+            "first_ingredient" : "Cow's milk ricotta",
+            "second_ingredient" : "Bitter cocoa to taste",
+            "third_ingredient" : "Unsweetened",
             "order_button" : "ORDER NOW",
             "type" : "dessert"
         },
         {
-            "name" : "BARBECUE PIZZA",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "name" : "KIWI FRESH",
+            "image" : "kiwi-cocktail.avif",
+            "first_ingredient" : "Kiwi",
+            "second_ingredient" : "Mint leaves",
+            "third_ingredient" : "Ice",
             "order_button" : "ORDER NOW",
-            "type" : "dessert"
+            "type" : "drinks"
         },
         {
-            "name" : "STRAWBERRY DAIQUIRI",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "name" : "FETTUCINI ALFREDO",
+            "image" : "fettucini-alfredo.jpg",
+            "first_ingredient" : "Fetuccini",
+            "second_ingredient" : "Mushrooms",
+            "third_ingredient" : "Chicken breast",
             "order_button" : "ORDER NOW",
-            "type" : "dessert"
+            "type" : "pasta"
         },
         {
-            "name" : "BARBECUE PIZZA",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "name" : "NEGRONI COCKTAIL",
+            "image" : "negroni.jpg",
+            "first_ingredient" : "Campari",
+            "second_ingredient" : "Gin",
+            "third_ingredient" : "Sweet vermouth",
             "order_button" : "ORDER NOW",
-            "type" : "dessert"
+            "type" : "drinks"
         },
         {
-            "name" : "BARBECUE PIZZA",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "name" : "MOSCOW MULE",
+            "image" : "moscow-mule.jpg",
+            "first_ingredient" : "Vodka",
+            "second_ingredient" : "Fresh lime",
+            "third_ingredient" : "Ginger beer",
             "order_button" : "ORDER NOW",
-            "type" : "dessert"
+            "type" : "drinks"
         },
         {
-            "name" : "BARBECUE PIZZA",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "name" : "MANATHAN COCKTAIL",
+            "image" : "manathan-cocktail.webp",
+            "first_ingredient" : "Bourbon",
+            "second_ingredient" : "Sweet red vermouth",
+            "third_ingredient" : "Angostura or orange bitters",
             "order_button" : "ORDER NOW",
-            "type" : "dessert"
+            "type" : "drinks"
         },
         {
-            "name" : "BARBECUE PIZZA",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "name" : "ULTIMATE BLOODY MARY",
+            "image" : "bloody-mary-cocktail.webp",
+            "first_ingredient" : "Liddel French Winter wheat wodka",
+            "second_ingredient" : "Lemon wedge",
+            "third_ingredient" : "Tomato juice",
             "order_button" : "ORDER NOW",
-            "type" : "dessert"
+            "type" : "drinks"
         },
         {
-            "name" : "BARBECUE PIZZA",
-            "image" : "image.png",
-            "first_ingredient" : "Strawberries",
-            "second_ingredient" : "Cream",
-            "third_ingredient" : "Salt",
-            "description" : "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or",
+            "name" : "HALLOWEN MONSTER BURGER",
+            "image" : "halloween-monster-burger.jpg",
+            "first_ingredient" : "Beef chuck",
+            "second_ingredient" : "Marinated cucumber",
+            "third_ingredient" : "Tomato sauce",
+            "order_button" : "ORDER NOW",
+            "type" : "burgers"
+        },
+        {
+            "name" : "RED VELVET CAKE",
+            "image" : "red-velvet-cake.jpg",
+            "first_ingredient" : "Plain hot coffee or boilling water",
+            "second_ingredient" : "Unsweetened natural cocoa powder",
+            "third_ingredient" : "All-purpose flour",
+            "order_button" : "ORDER NOW",
+            "type" : "desserts"
+        },
+        {
+            "name" : "TRIPLE-CHOC SEMIFREDO",
+            "image" : "triple-choc-semifreddo.jpg",
+            "first_ingredient" : "Eggs",
+            "second_ingredient" : "Sugar",
+            "third_ingredient" : "White chocolate, melted",
+            "order_button" : "ORDER NOW",
+            "type" : "desserts"
+        },
+        {
+            "name" : "MANGO & LIME SEMIFREDO",
+            "image" : "mango-lime-semifreddo.jpg",
+            "first_ingredient" : "Coconut cream, chilled",
+            "second_ingredient" : "Eggs",
+            "third_ingredient" : "Thickened cream",
+            "order_button" : "ORDER NOW",
+            "type" : "desserts"
+        },
+        {
+            "name" : "NUTELLA CREPES",
+            "image" : "nutella-crepes.jpg",
+            "first_ingredient" : "Milk",
+            "second_ingredient" : "Strawberry",
+            "third_ingredient" : "Nutella",
+            "order_button" : "ORDER NOW",
+            "type" : "desserts"
+        },
+        {
+            "name" : "GREEK PIZZA",
+            "image" : "greek-pizza.jpg",
+            "first_ingredient" : "Chicken",
+            "second_ingredient" : "Olive",
+            "third_ingredient" : "Tomato",
+            "order_button" : "ORDER NOW",
+            "type" : "pizzas"
+        },
+        {
+            "name" : "CLASSIC CHEESE BURGER",
+            "image" : "classic-cheese-burger.avif",
+            "first_ingredient" : "Burger buns, toasted",
+            "second_ingredient" : "Beef",
+            "third_ingredient" : "Vegan cheddar cheese",
+            "order_button" : "ORDER NOW",
+            "type" : "burgers"
+        },
+        {
+            "name" : "PINA COLADA",
+            "image" : "pina-colada.jpg",
+            "first_ingredient" : "Coconut",
+            "second_ingredient" : "White rum",
+            "third_ingredient" : "Lime juice",
+            "order_button" : "ORDER NOW",
+            "type" : "drinks"
+        },
+        {
+            "name" : "PASTA PESTO",
+            "image" : "pasta-pesto.jpg",
+            "first_ingredient" : "Uncooked pasta",
+            "second_ingredient" : "Cashewas or pine nuts",
+            "third_ingredient" : "Fresh basil leaves",
             "order_button" : "ORDER NOW",
             "type" : "dessert"
         }

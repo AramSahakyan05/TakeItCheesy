@@ -21,10 +21,6 @@ const menuSchema= new mongoose.Schema({
         type: String,
         required: true
     },
-    description:  {
-        type: String,
-        required: true
-    },
     order_button:  {
         type: String,
         required: true

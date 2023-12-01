@@ -13,11 +13,10 @@ import "./BlogSideBar.scss";
 const BlogSideBar = () => {
   const [recentPosts, setRecentPosts] = useState([]);
   useEffect(() => {
-    // Fetch data from your API
     (async function getData() {
       try {
         const resp = await axios.get('/blog-leftside');
-        setRecentPosts(resp.data.recent_posts);
+        setRecentPosts(resp.data.recentPosts);
       } catch (error) {
         throw new Error(error);
       }
@@ -43,8 +42,8 @@ const BlogSideBar = () => {
       <div className="blog__side__bar__recent__posts">
         <h1>Recent Posts</h1>
         <div className="blog__side__bar__recent__posts__container">
-          {recentPosts.map(({ id, post_date, post_image, title }) => {
-            return <RecentPost id={id} date={post_date} img={post_image} title={title} key={id}/>;
+          {recentPosts.map(({ _id, date, image, title }) => {
+            return <RecentPost id={_id} date={date} image={require(`../../../../assets/blog-bars-images/${image}`)} title={title} key={_id}/>;
           })}
         </div>
       </div>

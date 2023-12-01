@@ -15,7 +15,7 @@ const MainBlog = () => {
       (async function getMenuList() {
         try {
           const resp = await axios.get('/blog-leftside');
-          setBlogSidesPosts(resp.data.blog_sidebar);
+          setBlogSidesPosts(resp.data.blogSidePostsData);
         } catch (error) {
           throw new Error(error);
         }
@@ -24,17 +24,17 @@ const MainBlog = () => {
 
   return (
     <div className="main__blog">
-      {blogSidesPosts.map(({ id, image, author, comments, title, comment_description}) => (
+      {blogSidesPosts.map(({ _id, image, author, comments, title, description}) => (
         <Blog
-          key={id}
-          img={image}
-          desc={comment_description}
+          key={_id}
+          img={require(`../../../../assets/blog-bars-images/${image}`)}
+          desc={description}
           title={title}
           author={author}
           comments={comments}
         />
       ))}
-      <Pagination pages={blogSidesPosts}/>
+      {/* <Pagination pages={blogSidesPosts}/> */}
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import { CONFIG } from "../../../config";
 
-import blogBanner from "../../../assets/blog-images/blog-detail/blog-5.jpg";
-import bg from "../../../assets/blog-images/blog-detail/blog-2.jpg";
-import tag from "../../../assets/blog-images/blog-detail/tag.jpg";
+import blogBanner from "../../../assets/banner/blog-banner.jpg";
+import bg from "../../../assets/blog-images/blog-2.jpg";
+import tag from "../../../assets/blog-images/tag.jpg";
 
 import Container from "../../UIContainer/container/Container";
 import PageBanner from "../../UIContainer/page-banner/PageBanner";

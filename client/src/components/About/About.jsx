@@ -8,7 +8,7 @@ import VideoPlayer from "./VideoPlayer";
 import aboutImg from "../../assets/about/about-1.jpg";
 import storyImg from "../../assets/about/story.png";
 import videoImg from "../../assets/about/about-video-img.jpg";
-import about_banner_picture from '../../assets/about/about_banner.jpg';
+import about_banner_picture from '../../assets/banner/about_banner.jpg';
 
 import PageBanner from '../UIContainer/page-banner/PageBanner';
 import { CustomerReviews } from "../Home/home-reviews-slider/CustomerReviews";
@@ -81,7 +81,6 @@ const About = () => {
                 return
             }
         }
-        console.log(scrolledIntro);
       }
       window.addEventListener("scroll", handleScroll);
       

@@ -1,7 +1,7 @@
-import { Blog } from "../models/BlogModel.js";
+import { BlogReview } from "../models/BlogReviewModel.js";
 
 export const createBlogData = async (req, res) => {
-    const blogData = await Blog.find({});
+    const blogData = await BlogReview.find({});
     res.json({
         blogData
     });
