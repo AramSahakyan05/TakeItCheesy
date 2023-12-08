@@ -2,49 +2,49 @@
     "pizzaData" : [
         {
             "image": "classic-pepperoni.png",
-            "name": "PEPPERONI",
+            "name": "pepperoni",
             "price": 55.00,
-            "desctiption": "Tomato sauce, pepperoni, mozzarella,parmezan, garlic, oregano, sugar.",
+            "description": "Tomato sauce, pepperoni, mozzarella,parmezan, garlic, oregano, sugar.",
             "last_price": 40.19,
             "currency": "USD"
         },
         {
             "image": "veggie.png",
-            "name": "VERY VEGGIE",
+            "name": "very veggie",
             "price": 53.00,
-            "desctiption": "Tomato sauce, purple onion, mushrooms, green pepper, olive fruit.",
+            "description": "Tomato sauce, purple onion, mushrooms, green pepper, olive fruit.",
             "last_price": 53.00,
             "currency": "USD"
         },
         {
             "image": "super-supreme.png",
-            "name": "SUPER SUPREME",
+            "name": "super supreme",
             "price": 55.00,
-            "desctiption": "Tomato souce, tomato, grated, mozarella, lettuce.",
+            "description": "Tomato souce, tomato, grated, mozarella, lettuce.",
             "last_price": 53.00,
             "currency": "USD"
         },
         {
             "image": "carnivore.png",
-            "name": "CARNIVORE",
+            "name": "carnivore",
             "price": 59.00,
-            "desctiption": "Ham, mozzarella, bacon.",
+            "description": "Ham, mozzarella, bacon.",
             "last_price": 59.00,
             "currency": "USD"
         },
         {
             "image": "hot-stuff-beef.png",
-            "name": "HOST STUFF BEEF",
+            "name": "host stuff beef",
             "price": 30.29,
-            "desctiption": "Sausage, purple onion, marinated cucumber, tomato sauce, mushroom, parsley.",
+            "description": "Sausage, purple onion, marinated cucumber, tomato sauce, mushroom, parsley.",
             "last_price": 56.00,
             "currency": "USD"
         },
         {
             "image": "grilled-cheeky-chicken.png",
-            "name": "GRILLED CHEEKY CHICKEN",
+            "name": "grilled cheeky chicken",
             "price": 30.29,
-            "desctiption": "Crushed San Marzano tomato sauce, fresh mozzarella and basil, a drizzle of olive oil, and a sprinkle of salt.",
+            "description": "Crushed San Marzano tomato sauce, fresh mozzarella and basil, a drizzle of olive oil, and a sprinkle of salt.",
             "last_price": 59.00,
             "currency": "USD"
         }
@@ -396,21 +396,21 @@
     ],
     "pizzaReviewData" : [
         {
-            "image"  : "customer1.png",
+            "image"  : "customer1.jpg",
             "name"   : "Jason Stethem",
             "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
             "reply_button" : "Reply",
             "date" : "2023-11-11"
         },
         {
-            "image"  : "customer2.png",
+            "image"  : "customer2.jpg",
             "name"   : "Dwayne Johnson",
             "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
             "reply_button" : "Reply",
             "date" : "2023-11-11"
         },
         {
-            "image"  : "customer3.png",
+            "image"  : "customer3.jpg",
             "name"   : "Vin Diesel",
             "review" : "Lorem ipsum dolor sit amet adipiscing elit labore dolore that sed do eiusmod tempor labore dolore that magna aliqua. Ut enim ad minim veniam, exercitation.",
             "reply_button" : "Reply",
@@ -616,6 +616,11 @@
             "order_button" : "ORDER NOW",
             "type" : "dessert"
         }
-
+    ],
+    "registeredUsersData" : [
+        {
+            "username" : "Aram",
+            "password" : "12345"
+        }
     ]
 }

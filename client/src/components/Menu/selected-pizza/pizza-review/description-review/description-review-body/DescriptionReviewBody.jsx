@@ -1,7 +1,6 @@
 import DescriptionReviewForm from "../description-review-form/DescriptionReviewForm";
 
 const DescriptionReviewBody = ({active, descriptionReviewData}) => {
-  console.log(descriptionReviewData);
   return (
     <div className='description-review-body'>
       <div className="description" style={{display: !active ? "block" : "none"}}>
@@ -20,14 +19,14 @@ const DescriptionReviewBody = ({active, descriptionReviewData}) => {
           <span>COMMENTS</span>
         </h3>
         {
-          descriptionReviewData.map(({id, commenter_image, commenter_full_name, commenter_review, reply_button, review_date}) => {
+          descriptionReviewData.map(({_id, image, name, review, reply_button, date}) => {
             return (
-              <div key={id} className='commenter'>
-                <img src={commenter_image} alt="" />
+              <div key={_id} className='commenter'>
+                <img src={require(`../../../../../../assets/reviews/${image}`)} alt="" />
                 <div>
-                  <span>{commenter_full_name}</span>
-                  <span>{review_date.split('').splice(0, 10).join("")}</span>
-                  <p className='description'>{commenter_review}</p>
+                  <span>{name}</span>
+                  <span>{date}</span>
+                  <p className='description'>{review}</p>
                 </div>
                 <a href="#" className='reply'>{reply_button}</a>
               </div>

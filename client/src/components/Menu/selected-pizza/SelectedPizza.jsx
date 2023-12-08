@@ -2,7 +2,7 @@ import bannerBackground from "../../../assets/banner/banner-background.jpg";
 import PageBanner from "../../UIContainer/page-banner/PageBanner";
 import PizzaReview from "./pizza-review/PizzaReview";
 
-const SelectedPizza = ({ id }) => {
+const SelectedPizza = ({ pizzaName }) => {
   return (
     <div>
       <PageBanner
@@ -12,7 +12,7 @@ const SelectedPizza = ({ id }) => {
         secondDirectionPoint={"Order Online"}
         thirdDirectionPoint={"Chicken Bresast"}
       />
-      <PizzaReview id={id} />
+      <PizzaReview pizzaName={pizzaName} />
     </div>
   );
 };

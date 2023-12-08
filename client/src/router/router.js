@@ -3,7 +3,7 @@ export const ROUTER = {
   LOGIN_ROUTE: '/login',
   HOME_PAGE_ROUTE: "/home",
   MENU_PAGE_ROUTE: "/menu",
-  SINGLE_MENU_PAGE_ROUTE: "/menu/:id",
+  SINGLE_MENU_PAGE_ROUTE: "/menu/:pizzaName",
   BLOG_LEFTSIDE_PAGE_ROUTE: "/blog-leftside",
   BLOG_RIGHTSIDE_PAGE_ROUTE: "/blog-rightside",
   BLOG_PAGE_ROUTE: "/blog-detail",

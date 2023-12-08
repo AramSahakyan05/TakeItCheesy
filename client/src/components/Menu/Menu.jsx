@@ -13,35 +13,32 @@ import "./Menu.scss";
 
 import axios from "axios";
 
-
 const Menu = () => {
   
   const [foodMenuList, setFoodMenuList] = useState([]);
-  // const [drinks, setDrinks] = useState([]);
-  // const [salads, setSalads] = useState([]);
-  // const [pastas, setPastas] = useState([]);
-  // const [burgers, setBurgers] = useState([]);
-  // const [desserts, setDesserts] = useState([]);
-  // const [pizzas, setPizzas] = useState([]);
+  const [drinks, setDrinks] = useState([]);
+  const [salads, setSalads] = useState([]);
+  const [pastas, setPastas] = useState([]);
+  const [burgers, setBurgers] = useState([]);
+  const [desserts, setDesserts] = useState([]);
+  const [pizzas, setPizzas] = useState([]);
 
   useEffect(() => {
-    // Fetch data from your API
     (async function getMenuList() {
       try {
         const resp = await axios.get('/menu');
         setFoodMenuList(resp.data.foodMenuData);
-        // setDrinks(resp.data.food_menu_drinks);
-        // setSalads(resp.data.food_menu_salads);
-        // setPastas(resp.data.food_menu_pastas);
-        // setBurgers(resp.data.food_menu_burgers);
-        // setDesserts(resp.data.food_menu_desserts);
-        // setPizzas(resp.data.food_menu_pizzas);
+        setDrinks(resp.data.filterByDrinks);
+        setSalads(resp.data.filterBySalads);
+        setPastas(resp.data.filterByPastas);
+        setBurgers(resp.data.filterByBurgers);
+        setDesserts(resp.data.filterByDesserts);
+        setPizzas(resp.data.filterByPizzas);
       } catch (error) {
         throw new Error(error);
       }
     })();
   }, []);
-  console.log(foodMenuList);
 
   const [active, setActive] = useState(1);
 
@@ -86,13 +83,13 @@ const Menu = () => {
           </div>
           <div className="foodMenu-list">
             {
-            // (active === 1 ? foodMenuList
-            // : active === 2 ? drinks
-            // : active === 3 ? salads 
-            // : active === 4 ? pastas 
-            // : active === 5 ? burgers 
-            // : active === 6 ? desserts : pizzas)
-            foodMenuList.map(
+            (active === 1 ? foodMenuList
+            : active === 2 ? drinks
+            : active === 3 ? salads 
+            : active === 4 ? pastas 
+            : active === 5 ? burgers 
+            : active === 6 ? desserts : pizzas)
+            .map(
               ({
                 _id,
                 name,

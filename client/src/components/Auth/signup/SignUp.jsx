@@ -11,16 +11,16 @@ const SignUp = () => {
       <form className="signup" action='/signup' method='post'>
         <h1>SignUp</h1>
         <div className='username-side'>
-          <input type="text" name='username' placeholder=' '/>
+          <input type="text" name='username' placeholder=' ' required/>
           <label className="transformed">Username</label>
         </div>
         <div className="password-side">
-          <input type={`${!checkedSignup ? "password" : "text"}`} name='password' placeholder=' '/>
+          <input type={`${!checkedSignup ? "password" : "text"}`} name='password' placeholder=' ' required/>
           <label className="transformed" htmlFor="#password">Password</label>
         </div>
 
         <div className="password-side">
-          <input type={`${!checkedSignup ? "password" : "text"}`} name='confirmed_password' placeholder=' '/>
+          <input type={`${!checkedSignup ? "password" : "text"}`} name='confirmed_password' placeholder=' ' required/>
           <label className="transformed">Confirm Password</label>
         </div>
         <div className="check-password">

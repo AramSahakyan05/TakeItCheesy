@@ -1,11 +1,12 @@
+import {GrClose} from "react-icons/gr";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useSelector } from 'react-redux';
-import {GrClose} from "react-icons/gr";
 
 const PizzaReviewModal = ({activeModal, setActiveModal, thumbnailsData}) => {
   return (
@@ -24,10 +25,10 @@ const PizzaReviewModal = ({activeModal, setActiveModal, thumbnailsData}) => {
         navigation
         >
         {
-            thumbnailsData.map(({pizza_image}) => {
+            thumbnailsData.map(({image}) => {
                 return (
                 <SwiperSlide key={Math.random()} >
-                    <img src={pizza_image}/> 
+                    <img src={require(`../../../../../assets/header-images/menu-list-images/${image}`)}/> 
                 </SwiperSlide> 
                 )
             })

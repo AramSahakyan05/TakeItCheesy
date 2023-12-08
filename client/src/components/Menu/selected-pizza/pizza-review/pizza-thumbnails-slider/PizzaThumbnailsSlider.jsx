@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-import { useSelector } from 'react-redux';
+import { useEffect} from 'react';
 
 import { useParams } from 'react-router-dom';
 
@@ -14,12 +12,13 @@ import "swiper/css/scrollbar";
 
 
 
-const PizzaThumbnailsSlider = ({currentObject, setCurrentObject, thumbnailsData}) => {
-    const {id} = useParams();
-    const [active, setActive] = useState(+id);
-    const handleImageClick = (id) => {
-        setActive(id);
-    }
+const PizzaThumbnailsSlider = ({currentObject, setCurrentObject, thumbnailsData, active, setActive}) => {
+    
+    const {pizzaName} = useParams();
+    
+    useEffect(() => {
+        setActive(pizzaName)
+    }, [pizzaName])
 
   return (
     <div className="image-slider">
@@ -29,24 +28,24 @@ const PizzaThumbnailsSlider = ({currentObject, setCurrentObject, thumbnailsData}
         navigation
      >
         {
-            thumbnailsData.map(({id, pizza_image, pizza_name, pizza_price, pizza_description}) => {
+            thumbnailsData.map(({_id, name, image, price, description}) => {
                return (
                 <SwiperSlide 
-                key={id} >
+                key={_id} >
                     <img 
-                    src={pizza_image} 
+                    src={require(`../../../../../assets/header-images/menu-list-images/${image}`)} 
                     onClick={() => {
-                        setActive(id)
+                        setActive(name)
                         setCurrentObject({
                             ...currentObject,
-                            id,
-                            pizza_image,
-                            pizza_name,
-                            pizza_price,
-                            pizza_description
+                            _id,
+                            image,
+                            name,
+                            price,
+                            description
                         });
                     }}
-                    style={{opacity: active === id ? "1" : "0.5"}}
+                    style={{opacity: active === name ? "1" : "0.5"}}
                     /> 
                 </SwiperSlide> 
                )

@@ -36,16 +36,6 @@ button, input{
                 background-repeat: no-repeat;
                 background-size: contain;
             }
-            > .hover-square {
-                position: absolute;
-                width: 300px;
-                height: 300px; 
-                background-color: #e5e5e5;
-                z-index: 100;
-                pointer-events: none;
-                transform: translate(-50%, -50%);
-                opacity: .5 !important;
-            }
             .pizza-preview-modal {
                 position: absolute;
                 left: 0;
@@ -91,6 +81,10 @@ button, input{
                 padding-right: 5px;
                 &.last-price {
                     color: #d3d3d3;
+                    text-decoration: line-through;
+                }
+                &:nth-child(1) {
+                    color: #cecece;
                     text-decoration: line-through;
                 }
             }
@@ -197,11 +191,12 @@ button, input{
         background-repeat: no-repeat;
         overflow: hidden;
         position: absolute;
-        width: 450px;
-        height: 450px;
-        left: 44%;
+        width: 550px;
+        height: 500px;
+        top: 0;
+        left: 40%;
         z-index: 1;
-        transition: opacity .5s ease;
+        transition: all 500ms ease 0s;
     }
 }
 

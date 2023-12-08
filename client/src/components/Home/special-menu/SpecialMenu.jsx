@@ -14,12 +14,12 @@ import "./SpecialMenu.scss";
 const SpecialMenu = () => {
   const [active, setActive] = useState(1);
   const [specialMenuList, setSpecialMenuList] = useState([]);
-  // const [drinks, setDrinks] = useState([]);
-  // const [salads, setSalads] = useState([]);
-  // const [pastas, setPastas] = useState([]);
-  // const [burgers, setBurgers] = useState([]);
-  // const [desserts, setDesserts] = useState([]);
-  // const [pizzas, setPizzas] = useState([]);
+  const [drinks, setDrinks] = useState([]);
+  const [salads, setSalads] = useState([]);
+  const [pastas, setPastas] = useState([]);
+  const [burgers, setBurgers] = useState([]);
+  const [desserts, setDesserts] = useState([]);
+  const [pizzas, setPizzas] = useState([]);
 
   useEffect(() => {
     // Fetch data from your API
@@ -28,12 +28,12 @@ const SpecialMenu = () => {
         const resp = await axios.get('/home');
         console.log(resp.data);
         setSpecialMenuList(resp.data.specialMenuData);
-        // setDrinks(resp.data.drinks);
-        // setSalads(resp.data.salads);
-        // setPastas(resp.data.pastas);
-        // setBurgers(resp.data.burgers);
-        // setDesserts(resp.data.desserts);
-        // setPizzas(resp.data.pizzas);
+        setDrinks(resp.data.filterByDrinks);
+        setSalads(resp.data.filterBySalads);
+        setPastas(resp.data.filterByPastas);
+        setBurgers(resp.data.filterByBurgers);
+        setDesserts(resp.data.filterByDesserts);
+        setPizzas(resp.data.filterByPizzas);
       } catch (error) {
         throw new Error(error);
       }
@@ -74,14 +74,14 @@ const SpecialMenu = () => {
         </div>
         <div className="special-menu-items">
           {
-          // (active === 1 ? specialMenuList
-          //   : active === 2 ? drinks
-          //   : active === 3 ? salads 
-          //   : active === 4 ? pastas 
-          //   : active === 5 ? burgers 
-          //   : active === 6 ? desserts 
-          //   : pizzas)
-            specialMenuList.map(({ _id, image, name, price, description, currency}) => {
+          (active === 1 ? specialMenuList
+            : active === 2 ? drinks
+            : active === 3 ? salads 
+            : active === 4 ? pastas 
+            : active === 5 ? burgers 
+            : active === 6 ? desserts 
+            : pizzas)
+            .map(({ _id, image, name, price, description, currency}) => {
               const {$numberDecimal} = price;
             return (
               <div className="special-menu-items-item" key={_id}>

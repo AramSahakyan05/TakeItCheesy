@@ -12,8 +12,24 @@ export const createHomeData = async (req, res) => {
     const bestChefData = await BestChef.find({});
     const latestNewsData = await LatestNews.find({});
     const customerReviewsData = await CustomerReviews.find({});
-
+    const filterByDrinks = await SpecialMenu.find({type: "drinks"});
+    const filterBySalads = await SpecialMenu.find({type: "salads"});
+    const filterByPastas = await SpecialMenu.find({type: "pasta"});
+    const filterByBurgers = await SpecialMenu.find({type: "burgers"});
+    const filterByDesserts = await SpecialMenu.find({type: "desserts"});
+    const filterByPizzas= await SpecialMenu.find({type: "pizzas"});
     res.json({
-        pizzaData,specialityData,specialMenuData,bestChefData,latestNewsData,customerReviewsData
+        pizzaData,
+        specialityData,
+        specialMenuData,
+        bestChefData,
+        latestNewsData,
+        customerReviewsData,
+        filterByDrinks,
+        filterBySalads,
+        filterByPastas,
+        filterByBurgers,
+        filterByDesserts,
+        filterByPizzas
     });
 }

@@ -1,4 +1,4 @@
-const RelatedProducts = ({relatedProducts, setCurrentObject}) => {
+const RelatedProducts = ({relatedProducts, setCurrentObject, setActive}) => {
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -19,22 +19,23 @@ const RelatedProducts = ({relatedProducts, setCurrentObject}) => {
         </div>
         <div className="related-products-body">
             {
-                relatedProducts.map(({id, pizza_image, pizza_name, pizza_description, pizza_price, currency}) => {
+                relatedProducts.map(({_id, image, name, description, price, currency}) => {
+                    const {$numberDecimal} = price;
                     return (
-                        <div key={id} className="related-products-body-item">
+                        <div key={_id} className="related-products-body-item">
                             <a onClick={handleButtonClick}>
                                 <img 
-                                src={pizza_image} 
-                                className={`${id === 2 ? "inline" : ""}`} 
+                                src={require(`../../../../../assets/header-images/menu-list-images/${image}`)} 
                                 onClick={() => {
                                     setCurrentObject({
-                                        id, pizza_image, pizza_name, pizza_description, pizza_price, currency
-                                    })
+                                        _id, image, name, description, price, currency
+                                    });
+                                    setActive(name)
                                 }}/>
                             </a>
-                            <a href="#">{pizza_name}</a>
-                            <p>{pizza_description}</p>
-                            <span>{pizza_price}</span>
+                            <a href="#">{name.toUpperCase()}</a>
+                            <p>{description}</p>
+                            <span>{$numberDecimal} <span>{currency}</span> </span>
                         </div>
                     )
                 })

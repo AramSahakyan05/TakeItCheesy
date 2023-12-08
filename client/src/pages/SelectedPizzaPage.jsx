@@ -4,11 +4,12 @@ import SelectedPizza from "../components/Menu/selected-pizza/SelectedPizza";
 import Layout from "../layout/Layout";
 
 const SelectedPizzaPage = () => {
-  const { id } = useParams();
+  const {pizzaName} = useParams();
+
 
   return (
     <Layout>
-      <SelectedPizza id={id} />
+      <SelectedPizza pizzaName={pizzaName} />
     </Layout>
   );
 };

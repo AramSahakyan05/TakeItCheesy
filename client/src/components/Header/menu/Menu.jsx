@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import axios from "axios";
 
@@ -15,7 +15,6 @@ const Menu = ({ path }) => {
   const [headerMenuList, setHeaderMenuList] = useState([]);
 
   useEffect(() => {
-    // Fetch data from your API
     (async function getData() {
       try {
         const resp = await axios.get('/home');
@@ -38,14 +37,14 @@ const Menu = ({ path }) => {
                 <div
                   key={_id}
                   onClick={() => {
-                    navigate(`/menu/${i + 1}`);
+                    navigate(`/menu/${name}`);
                   }}
                 >
                   <div className="pizza__image">
                     <img src={require(`../../../assets/header-images/menu-list-images/${image}`)} alt="Pizza Image" />
                   </div>
                   <div className="about__pizza">
-                    <p>{name}</p>
+                    <p>{name.toUpperCase()}</p>
                     <p className="pizza__price">
                       {$numberDecimal}  
                       <span> {currency}</span> 
