@@ -16,7 +16,7 @@ function App() {
 
     const id = setTimeout(() => {
       setLocationChanged(false);
-    }, 15000);
+    }, 6000);
 
     return () => {
       clearTimeout(id);
