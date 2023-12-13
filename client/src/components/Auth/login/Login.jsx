@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useHistory } from "react-router-dom";
+import Error from '../../Error/Error';
+import axios from 'axios';
 import './Login.scss';
 
 const Login = () => {
   const [ checkedLogin, setCheckedLogin ] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <section className="login__section">
-      <form className="login" action='/login' method='post'>
+      <form className="login" action='/login' method='POST'>
       <h1>Login</h1>
       <div className='username-side'>
           <input type="text" id="username" name='username' placeholder=' ' required/>
@@ -27,7 +29,7 @@ const Login = () => {
           </div>
           <p>
               Don't have an account?
-              <a href='/'>Signup</a>
+              <a href='/signup'>Signup</a>
           </p>
        </div>
       <button type="submit">Login</button>

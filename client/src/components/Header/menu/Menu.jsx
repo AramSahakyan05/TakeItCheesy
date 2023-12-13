@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 
@@ -17,7 +17,7 @@ const Menu = ({ path }) => {
   useEffect(() => {
     (async function getData() {
       try {
-        const resp = await axios.get('/home');
+        const resp = await axios.get('/adds');
         setHeaderMenuList(resp.data.pizzaData);
       } catch (error) {
         throw new Error(error);
@@ -32,7 +32,7 @@ const Menu = ({ path }) => {
         <div className="pizzas">
           {
             headerMenuList.map(({ _id, image, name, price, currency }, i) => {
-              const {$numberDecimal} = price
+              const {$numberDecimal} = price;
               return (
                 <div
                   key={_id}

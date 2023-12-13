@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import { ROUTER } from "./router";
@@ -15,13 +17,14 @@ import CheckoutPage from "../pages/CheckoutPage";
 import ShoppingCartPage from "../pages/ShoppingCartPage";
 import SignUpPage from "../pages/SignUpPage";
 import LoginPage from "../pages/LoginPage";
-import { useEffect } from "react";
+import MyWorkPage from "../pages/MyWorkPage";
+import AddsPage from '../pages/AddsPage';
 
 const AppRoutes = () => {
   const location = useLocation();
   const navigate = useNavigate();
   useEffect(() => {
-    if(location.pathname === "/") navigate('/signup')
+    if(location.pathname === "/") navigate('/adds')
   }, [])
   return (
     <Routes>
@@ -38,6 +41,8 @@ const AppRoutes = () => {
       <Route path={ROUTER.SIGNUP_ROUTE} element={<SignUpPage />} />
       <Route path={ROUTER.LOGIN_ROUTE} element={<LoginPage />} />
       <Route path={ROUTER.ERROR_PAGE_ROUTE} element={<ErrorPage/>} />
+      <Route path={ROUTER.MY_WORK_PAGE} element={<MyWorkPage/>} />
+      <Route path={ROUTER.ADDS_ROUTE} element={<AddsPage />}/>
     </Routes>
   );
 };

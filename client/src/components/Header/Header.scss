@@ -44,10 +44,11 @@ header {
           margin-left: 15px;
           > h1 {
             @include transition;
-            font-size: 40px;
+            font-size: 35px;
             font-family: 'Permanent Marker', cursive; 
             color: #ffd283;
             > span {
+              font-family: inherit;
               background-image: url('https://www.mashed.com/img/gallery/swiss-cheeses-trademark-holes-are-caused-by-bacteria/intro-1676998215.jpg');
               -webkit-background-clip: text; 
               -webkit-text-fill-color: transparent;
@@ -64,7 +65,7 @@ header {
             overflow: hidden;
             margin: 0 20px;
             padding: 10px 0 15px 0;
-            font-size: 16px;
+            font-size: 13px;
             list-style-type: none;
             font-family: var(--template-font);
             display: flex;
@@ -118,8 +119,8 @@ header {
                 opacity: 0;
               }
             }
-            &:last-child {
-              padding: 11px 15px 11px;
+            &:nth-last-child(2) {
+              padding: 10px;
               background: #91b842;
               border-radius: 30px;
               margin-right: 0;

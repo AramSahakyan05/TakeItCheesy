@@ -13,12 +13,11 @@ import { createSelectedPizzaData } from './controller/pizzacontroller.js';
 import { createBlogSidePosts } from './controller/blogsidecontroller.js';
 import { addUser, findUserByName } from './signup.js';
 import { RegisteredUsers } from './models/RegisteredUsersModel.js';
+import { Pizza } from './models/PizzasModel.js';
+import { log } from 'console';
 
 const app = express();
 
-const publicPath = path.join(path.resolve(), '../public');
-
-app.use('/public', express.static(publicPath));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -35,11 +34,54 @@ passport.use(new passportLocal(findUserByName));
 
 passport.serializeUser((user, done) => {
     done(null, user._id);
+    console.log("serializeUser function called");
 });
 passport.deserializeUser(async (_id, done) => {
-    const find_user_by_id = await RegisteredUsers.find({_id: _id});
-    done(null, find_user_by_id);
+    try {
+      const find_user_by_id = await RegisteredUsers.findById(_id);
+  
+      if (!find_user_by_id) {
+        return done(null, false);
+      }
+  
+      done(null, find_user_by_id);
+    } catch (error) {
+      done(error);
+    }
+    console.log("deserializeUser function called");
+  });
+
+app.post('/signup', async (req, res) => {
+  const { username, password } = req.body;
+  console.log(req.body);
+  const hashedPwd = await bcrypt.hash(password, 10);
+    try {
+      const existingUser = await RegisteredUsers.findOne({username: username});
+      
+      if (existingUser) {
+        res.json({ error: 'User already exists' });
+      } else {
+        await addUser(username, hashedPwd);
+        res.json({ success: true });
+      }
+    } catch (error) {
+        console.error('Error during signup:', error);
+        return res.status(500).json({ error: 'Internal server error' });
+    }
 });
+
+app.post('/login', passport.authenticate('local', {
+    successRedirect: '/home',
+    failureRedirect: '/login',
+}));
+
+app.get('/adds', async (req, res) => {
+  const pizzaData = await Pizza.find({});
+  res.json({
+    pizzaData
+  })
+})
+// app.use(checkAuthentication);
 
 app.get('/home', createHomeData);
 app.get('/menu', createMenuData);
@@ -47,28 +89,28 @@ app.get("/menu/:name", createSelectedPizzaData);
 app.get('/blog-leftside', createBlogSidePosts);
 app.get('/blog-detail', createBlogData);
 
-app.post('/login', passport.authenticate('local', {
-    successRedirect: '/home',
-    failureRedirect: '/login'
-}));
-
-app.post('/signup', async (req, res) => {
-    const {username, password} = req.body;
-    const hashedPwd = await bcrypt.hash(password, 10);
-    await addUser(username, hashedPwd);
-    res.redirect('/login');
-})
-function checkAuthentication(req, res, next) {
-    if(!req.isAuthenticated()) {
-        return res.redirect('/login');
+app.get('/logout', (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.error('Error destroying session:', err);
+    } else {
+      res.clearCookie('connect.sid');
+      res.status(200).json({ route: '/login' });
     }
-    next();
+  });
+});
+
+function checkAuthentication(req, res, next) {
+    if (req.isAuthenticated() === false) {
+      return res.redirect('/login');
+    }
+    return next();
 }
 function checkNotAuthentication(req, res, next) {
-    if(req.isAuthenticated()) {
-        return res.redirect('/home');
-    }
-    next();
+  if(req.isAuthenticated() === true) {
+      return res.redirect('/home');
+  }
+  next();
 }
 
 const start = async () => {

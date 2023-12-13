@@ -26,7 +26,7 @@ const SpecialProducts = () => {
     <section className="special__products">
       <Container>
         <div className="products">
-          <h4 className="products-header">Fresh From Pizzon</h4>
+          <h4 className="products_heading">Fresh From Pizzon</h4>
           <h2
             style={{
               fontSize: "60px",
@@ -36,17 +36,17 @@ const SpecialProducts = () => {
           >
             OUR SPECIALITY
           </h2>
-          <div className="products-items">
+          <div className="products__items">
             {ourSpectalityData.map(({ _id, image, type }) => {
               return (
-                <div className="pruducts-items-item" key={_id}>
+                <div className="products__items__item" key={_id}>
                   <img src={require(`../../../../assets/home-speciality/${image}`)} alt="Special Products" />
-                  <h4 style={{ marginTop: "30px" }}>{type}</h4>
+                  <h4>{type}</h4>
                 </div>
               );
             })}
           </div>
-          <button className="products-button" onClick={() => navigate("/")}>
+          <button className="products__button" onClick={() => navigate("/")}>
             VIEW MORE
           </button>
         </div>

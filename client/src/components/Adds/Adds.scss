@@ -1,0 +1,38 @@
+.adds__section {
+    min-height: 100vh;
+    padding: 150px 50px 0;
+    text-align: center;
+    position: relative;
+    background-color: #121619;
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../assets/home-bestChef/chef.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
+    > .adds {
+        width: 45%;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+        > h3 {
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        > span {
+            margin: 20px 0;
+        }
+        > p {
+            margin-top: 10px;
+            margin: 10px auto; 
+        }
+    }
+}

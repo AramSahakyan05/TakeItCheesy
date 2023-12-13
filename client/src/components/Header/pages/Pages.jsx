@@ -15,7 +15,7 @@ const Pages = () => {
               key={id}
               onClick={() => {
                 if (id === 1) navigate("/about");
-                if (id === 4) navigate("/error");
+                if(id === 2) navigate('/mywork')
               }}
             >
               {title}

@@ -23,7 +23,6 @@ const Home = () => {
       <LatestNews />
       <CustomerReviews/>
       <PizzonIntro />
-      {/* kody grelu eq aystex, baci headeric ev footeric, qani vor nranq gtnvum en Layout-i mej!!!! */}
     </div>
   );
 };

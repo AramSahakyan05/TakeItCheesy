@@ -54,7 +54,7 @@
       color: #999999;
     }
     li:hover {
-      color: var(--global-orange-color);
+      color: var(--template-yellow);
     }
   }
   &__tags {
@@ -73,7 +73,7 @@
         transition: all 350ms ease;
       }
       > a:hover {
-        background-color: var(--global-orange-color);
+        background-color: var(--template-yellow);
         color: white;
       }
     }
@@ -110,7 +110,7 @@
         cursor: pointer;
         p {
           font-size: 14px;
-          color: var(--global-orange-color);
+          color: var(--template-yellow);
           text-transform: uppercase;
           letter-spacing: 1px;
           margin-bottom: 4px;
@@ -127,7 +127,7 @@
           transition: all 400ms ease;
         }
         span:hover {
-          color: var(--global-orange-color);
+          color: var(--template-yellow);
         }
       }
     }

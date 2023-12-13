@@ -1,31 +1,44 @@
 import { useEffect, useState } from "react";
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
+// import {useCookies} from 'react-cookie';
+
+import { Link, useNavigate } from "react-router-dom";
 
 import { CONFIG } from "../../config";
 import { ROUTER } from "../../router/router";
+
+import axios from "axios";
 
 import Container from "../UIContainer/container/Container";
 import Menu from "./menu/Menu";
 import Blog from "./blog/Blog";
 import Pages from "./pages/Pages";
-import ShoppingCardDropdown from "./shopping-card-dropdown/ShoppingCardDropdown";
 
 import './Header.scss';
+// import ErrorPage from "../../pages/ErrorPage";
 
-
-const Header = () => {
+const Header = ({hide}) => {
 
   const [scrolled, setScrolled] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [cookies, setCookies, removeCookies] = useCookies(['connect.sid']);
   const navigate = useNavigate();
-  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
-      }
+      };
+      // const isAuthenticated = async () => {
+      //   try {
+      //     const resp = await axios.get('/login');
+      //     setIsLoggedIn(resp.data.loggedIn)
+      //   } catch (error) {
+      //     return <ErrorPage />
+      //   }
+      // }
+
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -42,7 +55,7 @@ const Header = () => {
   ];
 
   return (
-    <header className={scrolled ? "fixed" : ""}>
+    <header className={scrolled ? "fixed" : ""} style={{display: hide ? "none" : "block"}}>
       <Container>
         <div className="row">
           <div
@@ -69,6 +82,10 @@ const Header = () => {
                       ? "shopping__cart__item"
                       : null
                   }
+                  onClick={() => {
+                    Logout(id)
+                  }}
+                  // style={{display: (i === 8) ? "block" : "none"}}
                 >
                   {icon}
                   {icon}
@@ -80,15 +97,37 @@ const Header = () => {
                   {id === 2 ? <Menu path={routes[1]} /> : null}
                   {id === 3 ? <Blog /> : null}
                   {id === 5 ? <Pages /> : null}
-                  {/* {id === 7 ? <ShoppingCardDropdown /> : null} */}
                 </li>
               );
             })}
+            {/* <li onClick={() => {
+              (async function getData() {
+                try {
+                  const resp = await axios.get('/logout');
+                  navigate(resp.data.route);
+                  console.log(resp);
+                } catch (error) {
+                  throw new Error(error);
+                }
+              })()
+            }}>Log Out</li> */}
           </ul>
         </div>
       </Container>
     </header>
   );
+async function Logout(id) {
+    if(id === 9) {
+      try {
+        const resp = await axios.get('/logout');
+        navigate(resp.data.route);
+      } catch (error) {
+        throw new Error(error);
+      }
+    }
+  }
 };
+
+
 
 export default Header;

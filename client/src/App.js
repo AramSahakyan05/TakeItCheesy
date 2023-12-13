@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 import { useLocation} from "react-router-dom";
 
+import { ToastContainer } from "react-toastify";
+
 import AppRoutes from "./router/AppRoutes";
 import PageLoading from "./components/PageLoading/PageLoading";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
@@ -26,6 +28,19 @@ function App() {
   return (
     <div className="App">
       <AppRoutes />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      <ToastContainer />
       {locationChanged && <PageLoading />}
       {locationChanged && <ScrollTop />}
     </div>
@@ -33,3 +48,4 @@ function App() {
 }
 
 export default App;
+

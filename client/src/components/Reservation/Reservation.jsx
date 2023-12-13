@@ -66,12 +66,14 @@ const Reservation = () => {
                     animation: down
                       ? "show 0.5s ease-in-out"
                       : "hide 0.5s ease-in-out ",
+                      position: 'absolute',
+                      width: '100%'
                   }}
                 >
                   {time.map(({ id, title }) => {
                     return (
                       <div
-                        className="book-table-inputs-left-hidden-first"
+                        className="book-table-inputs-left-first"
                         key={id}
                         onClick={() => {
                           setDown(() => setDown(!down));
@@ -92,7 +94,6 @@ const Reservation = () => {
                   className="book-table-inputs-right-visible"
                   style={{ cursor: "pointer" }}
                   onClick={() => {
-                    console.log(123);
                     setdownWard((prev) => !prev);
                   }}
                 >
@@ -116,6 +117,8 @@ const Reservation = () => {
                     animation: downWard
                       ? "open 0.5s ease-in-out"
                       : "close 0.5s ease-in-out ",
+                      position: 'absolute',
+                      width: '100%'
                   }}
                 >
                   {people.map(({ id, title }) => {
@@ -139,8 +142,8 @@ const Reservation = () => {
             </div>
             <input
               type="text"
-              className="book-table-coments"
-              placeholder="Coments"
+              className="book-table-comments"
+              placeholder="Comments"
             />
             <br />
             <button>BOOK A TABLE</button>

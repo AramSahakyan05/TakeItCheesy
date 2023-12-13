@@ -9,29 +9,30 @@ import Container from "../UIContainer/container/Container";
 import "./Footer.scss";
 
 
-const Footer = () => {
+const Footer = ({hide}) => {
   const navigate = useNavigate();
-  return <footer className="footer">
+  return (
+  <footer className="footer"  style={{display: hide ? "none" : "block"}}>
     <Container>
-    <div className="footer__top">
-          <div
-            className="logo"
-            onClick={() => {
-              navigate('/home');
-            }}
-          >
-            <h1>TAKE IT <span>CHEESY</span></h1>
-          </div>
-      {
-        CONFIG.footerConfig.footer_top.map(({id, title}) => {
-          return (
-            <h2 key={id}>
-              {title}
-            </h2>
-          )
-        })
-      }
-    </div>
+      <div className="footer__top">
+        <div
+          className="logo"
+          onClick={() => {
+            navigate('/home');
+          }}
+        >
+          <h1>TAKE IT <span>CHEESY</span></h1>
+        </div>
+        {
+          CONFIG.footerConfig.footer_top.map(({id, title}) => {
+            return (
+              <h2 key={id}>
+                {title}
+              </h2>
+            )
+          })
+        }
+      </div>
     <div className="footer__body">
       <div className="first__footer__list">
         <ul >
@@ -80,8 +81,8 @@ const Footer = () => {
     <div className="copy__text">
       <div>
         <p>
-        © Pizzon all Rights Reserved. Designed by 
-        <a href="#">TemplatesCoder</a>
+        © TakeItCheesy All Rights Reserved. Designed by 
+        <a href="#">Aramayis Sahakyan</a>
         </p>
       </div>
       <div className="footer__icons">
@@ -92,7 +93,7 @@ const Footer = () => {
       </div>
     </div>
     </Container>
-  </footer>;
+  </footer>);
 
 };
 

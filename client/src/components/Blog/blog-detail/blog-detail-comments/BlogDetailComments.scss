@@ -31,7 +31,7 @@
           padding-left: 30px;
         }
           a {
-            background: var(--global-orange-color);
+            background: var(--template-yellow);
             color: #fff;
             text-transform: uppercase;
             padding: 12px 25px;
@@ -50,9 +50,9 @@
           }
           a:hover {
             background: transparent;
-            color: var(--global-orange-color);
+            color: var(--template-yellow);
             svg{
-              color: var(--global-orange-color);
+              color: var(--template-yellow);
             }
           }
       }
@@ -82,10 +82,10 @@
           height: 50px;
           border: 1px solid #999999;
           border-radius: unset;
-          outline: var(--global-orange-color);
+          outline: var(--template-yellow);
         }
         input:focus {
-          border-color: var(--global-orange-color);
+          border-color: var(--template-yellow);
         }
       }
       &__input:nth-of-type(3) {
@@ -97,28 +97,28 @@
         textarea {
           width: 100%;
           min-height: 150px;
-          outline: var(--global-orange-color);
+          outline: var(--template-yellow);
           padding: 13px;
           font-size: 14px;
         }
         textarea:focus {
-          border-color: var(--global-orange-color);
+          border-color: var(--template-yellow);
         }
       }
       &__submit {
-        background: var(--global-orange-color);
+        background: var(--template-yellow);
         color: #fff;
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 1px;
-        border: 1px solid var(--global-orange-color);
+        border: 1px solid var(--template-yellow);
         border-radius: 50px;
         padding: 21px 30px;
         cursor: pointer;
         transition: all 400ms ease;
       }
       &__submit:hover {
-        color: var(--global-orange-color);
+        color: var(--template-yellow);
         background: transparent;
       }
     }

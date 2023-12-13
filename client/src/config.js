@@ -1,11 +1,6 @@
 import { BsTelephone } from "react-icons/bs";
 import { SlHandbag } from "react-icons/sl";
 
-// import pepperoni from "./assets/header-images/menu-list-images/classic-pepperoni.png";
-// import vegetarian from "./assets/header-images/menu-list-images/veggie.png";
-// import margherita from "./assets/header-images/menu-list-images/margherita.webp";
-// import valentinos_special_pizza_picture from "./assets/header-images/menu-list-images/valentinos-special-pizza.jpg";
-
 import pizza_1 from "./assets/Images/home-slider-images/banner-bg-1.png";
 import pizza_3 from "./assets/Images/home-slider-images/pizza-banner-2.png";
 import pizza_2 from "./assets/Images/home-slider-images/pizza-banner-1.png";
@@ -29,8 +24,9 @@ import order_plate from "./assets/Images/home-order-sec-icons/order-1.svg";
 import order_truck from "./assets/Images/home-order-sec-icons/order-2.svg";
 import order_pizza from "./assets/Images/home-order-sec-icons/order-3.svg";
 
-
 import {FaHeart, FaEnvelope, FaSignal, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram} from "react-icons/fa6";
+import { IoIosLogOut } from "react-icons/io";
+
 export const CONFIG = {
   specialMenuConfig: [
     { id: 1, title: "ALL", type: "All" },
@@ -82,6 +78,11 @@ export const CONFIG = {
       title: "ORDER ONLINE",
       icon: null,
     },
+    {
+      id: 9,
+      title: null,
+      icon: <IoIosLogOut />
+    }
   ],
   menuConfig: {
     menuListConfig: [
@@ -124,14 +125,10 @@ export const CONFIG = {
     },
     {
       id: 2,
-      title: "Contact",
+      title: "My Work",
     },
     {
       id: 3,
-      title: "Shop Grid",
-    },
-    {
-      id: 4,
       title: "404",
     },
   ],

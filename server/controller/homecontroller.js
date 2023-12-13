@@ -1,4 +1,3 @@
-import { Pizza } from "../models/PizzasModel.js";
 import { Speciality } from "../models/OurSpecialityModel.js";
 import { BestChef } from "../models/BestChefModel.js";
 import { LatestNews } from "../models/LatestNewsModel.js";
@@ -6,7 +5,6 @@ import { CustomerReviews } from "../models/CustomerReviewsModel.js";
 import { SpecialMenu } from "../models/SpecialMenuModel.js";
 
 export const createHomeData = async (req, res) => {
-    const pizzaData = await Pizza.find({});
     const specialityData = await Speciality.find({});
     const specialMenuData = await SpecialMenu.find({});
     const bestChefData = await BestChef.find({});
@@ -19,7 +17,6 @@ export const createHomeData = async (req, res) => {
     const filterByDesserts = await SpecialMenu.find({type: "desserts"});
     const filterByPizzas= await SpecialMenu.find({type: "pizzas"});
     res.json({
-        pizzaData,
         specialityData,
         specialMenuData,
         bestChefData,
@@ -33,3 +30,4 @@ export const createHomeData = async (req, res) => {
         filterByPizzas
     });
 }
+

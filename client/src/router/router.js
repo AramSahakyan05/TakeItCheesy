@@ -1,4 +1,5 @@
 export const ROUTER = {
+  ADDS_ROUTE: '/adds',
   SIGNUP_ROUTE: '/signup',
   LOGIN_ROUTE: '/login',
   HOME_PAGE_ROUTE: "/home",
@@ -11,5 +12,6 @@ export const ROUTER = {
   ABOUT_PAGE_ROUTE: "/about",
   CHECKOUT_PAGE_ROUTE: "/checkout",
   SHOPPING_CART_ROUTE:"/cart",
+  MY_WORK_PAGE : '/mywork',
   ERROR_PAGE_ROUTE: "/*",
 };

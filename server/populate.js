@@ -1,24 +1,7 @@
 import path from "path";
 import fs from 'fs/promises';
 import connectDB from "./connect.js";
-import { Pizza } from "./models/PizzasModel.js";
 import { PizzaReview } from "./models/PizzaReviewModel.js";
-// const absolutePath = path.resolve('../client/src/assets/header-images/menu-list-images');
-
-// async function postImageData() {
-//     const images = [];
-//     try {
-//         const files = await fs.readdir(absolutePath);
-//         files.forEach((file, i) => {
-//             images.push({ id: i, path: path.join(absolutePath, file) });
-//         });
-//         return images;
-//     } catch (err) {
-//         console.error('Error reading directory:', err);
-//         return [];
-//     }
-// }
-// const images = await postImageData();
 
 async function readJsonFile(filePath) {
     try {
@@ -45,4 +28,4 @@ const start = async (model, data) => {
         process.exit(1)
     }
 };
-start(PizzaReview, data.pizzaReviewData);
+// start(RegisteredUsers, data.pizzaReviewData);
