@@ -1,5 +1,4 @@
-import express from 'express';
-import path from 'path';    
+import express from 'express';  
 import session from 'express-session';
 import cors from 'cors';
 import bcrypt from 'bcrypt';
@@ -11,10 +10,9 @@ import { createMenuData } from './controller/menucontroller.js';
 import { createBlogData } from './controller/blogcontroller.js';
 import { createSelectedPizzaData } from './controller/pizzacontroller.js';
 import { createBlogSidePosts } from './controller/blogsidecontroller.js';
-import { addUser, findUserByName } from './signup.js';
+import { addUser, checkUser, findUserByName } from './signup.js';
 import { RegisteredUsers } from './models/RegisteredUsersModel.js';
 import { Pizza } from './models/PizzasModel.js';
-import { log } from 'console';
 
 const app = express();
 
@@ -70,10 +68,22 @@ app.post('/signup', async (req, res) => {
     }
 });
 
-app.post('/login', passport.authenticate('local', {
-    successRedirect: '/home',
-    failureRedirect: '/login',
-}));
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const userExists = await checkUser(username, password);
+
+    if (userExists) {
+      res.status(200).json({ success: true });
+    } else {
+      res.status(401).json({ message: "Invalid credentials" });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Something went wrong, try again" });
+  }
+});
 
 app.get('/adds', async (req, res) => {
   const pizzaData = await Pizza.find({});
@@ -100,18 +110,18 @@ app.get('/logout', (req, res) => {
   });
 });
 
-function checkAuthentication(req, res, next) {
-    if (req.isAuthenticated() === false) {
-      return res.redirect('/login');
-    }
-    return next();
-}
-function checkNotAuthentication(req, res, next) {
-  if(req.isAuthenticated() === true) {
-      return res.redirect('/home');
-  }
-  next();
-}
+// function checkAuthentication(req, res, next) {
+//     if (req.isAuthenticated() === false) {
+//       return res.redirect('/login');
+//     }
+//     return next();
+// }
+// function checkNotAuthentication(req, res, next) {
+//   if(req.isAuthenticated() === true) {
+//       return res.redirect('/home');
+//   }
+//   next();
+// }
 
 const start = async () => {
     try {

@@ -101,13 +101,17 @@ form.signup {
         display: flex;
         justify-content: space-evenly;
         > div > label {
+            color: #999;
             cursor: pointer;
             padding-left: 5px;
         }
-        > p > a {
-            color: var(--global-gold);
-            cursor: pointer;
-            margin-left: 10px;
+        > p {
+            color: #999;
+            > a {
+                color: var(--template-yellow);
+                cursor: pointer;
+                margin-left: 10px;
+            }
         }
     }
 }

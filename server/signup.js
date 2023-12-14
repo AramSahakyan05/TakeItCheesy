@@ -28,3 +28,15 @@ export const findUserByName = async (username, password, done) => {
 
     return done(null, false, { message: 'Incorrect password' });
 }
+export const checkUser = async (name, passCode) => {
+  const users = await RegisteredUsers.find({});
+  
+  for (const { username, password } of users) {
+    const checkPassword = await bcrypt.compare(passCode, password);
+    if (username === name && checkPassword) {
+      return true; 
+    }
+  }
+
+  return false; 
+};
