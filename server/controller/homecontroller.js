@@ -3,8 +3,10 @@ import { BestChef } from "../models/BestChefModel.js";
 import { LatestNews } from "../models/LatestNewsModel.js";
 import { CustomerReviews } from "../models/CustomerReviewsModel.js";
 import { SpecialMenu } from "../models/SpecialMenuModel.js";
+import { Pizza } from "../models/PizzasModel.js";
 
 export const createHomeData = async (req, res) => {
+    const pizzaData = await Pizza.find({});
     const specialityData = await Speciality.find({});
     const specialMenuData = await SpecialMenu.find({});
     const bestChefData = await BestChef.find({});
@@ -27,7 +29,8 @@ export const createHomeData = async (req, res) => {
         filterByPastas,
         filterByBurgers,
         filterByDesserts,
-        filterByPizzas
+        filterByPizzas,
+        pizzaData
     });
 }
 

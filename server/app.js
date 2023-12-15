@@ -10,9 +10,8 @@ import { createMenuData } from './controller/menucontroller.js';
 import { createBlogData } from './controller/blogcontroller.js';
 import { createSelectedPizzaData } from './controller/pizzacontroller.js';
 import { createBlogSidePosts } from './controller/blogsidecontroller.js';
-import { addUser, checkUser, findUserByName } from './signup.js';
+import { addUser, checkLogin, checkSignUp, findUserByName } from './signup.js';
 import { RegisteredUsers } from './models/RegisteredUsersModel.js';
-import { Pizza } from './models/PizzasModel.js';
 
 const app = express();
 
@@ -50,29 +49,13 @@ passport.deserializeUser(async (_id, done) => {
   });
 
 app.post('/signup', async (req, res) => {
-  const { username, password } = req.body;
-  console.log(req.body);
-  const hashedPwd = await bcrypt.hash(password, 10);
-    try {
-      const existingUser = await RegisteredUsers.findOne({username: username});
-      
-      if (existingUser) {
-        res.json({ error: 'User already exists' });
-      } else {
-        await addUser(username, hashedPwd);
-        res.json({ success: true });
-      }
-    } catch (error) {
-        console.error('Error during signup:', error);
-        return res.status(500).json({ error: 'Internal server error' });
-    }
+  await checkSignUp(req, res);
 });
 
 app.post('/login', async (req, res) => {
   const { username, password } = req.body;
-
   try {
-    const userExists = await checkUser(username, password);
+    const userExists = await checkLogin(username, password);
 
     if (userExists) {
       res.status(200).json({ success: true });
@@ -84,13 +67,6 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ message: "Something went wrong, try again" });
   }
 });
-
-app.get('/adds', async (req, res) => {
-  const pizzaData = await Pizza.find({});
-  res.json({
-    pizzaData
-  })
-})
 // app.use(checkAuthentication);
 
 app.get('/home', createHomeData);

@@ -17,7 +17,7 @@ const Menu = ({ path }) => {
   useEffect(() => {
     (async function getData() {
       try {
-        const resp = await axios.get('/adds');
+        const resp = await axios.get('/home');
         setHeaderMenuList(resp.data.pizzaData);
       } catch (error) {
         throw new Error(error);
